@@ -1,0 +1,242 @@
+{
+  "$schema": "https://saasfort.com/schemas/nis2-control-library-v1.json",
+  "title": "SaaSFort NIS2 Article 21 Control Library",
+  "source": "NIS2 Directive (EU) 2022/2555 Article 21",
+  "generated_at": "2026-04-28T01:20:46Z",
+  "license": "MIT",
+  "repository": "https://github.com/saasfort/nis2-controls",
+  "controls": [
+    {
+      "control": "NIS2 Art.21(2)(a)",
+      "title": "Risk analysis \u0026 information system security policies",
+      "checks": [
+        "Active subdomains",
+        "CA diversity",
+        "CAA record",
+        "CT log query",
+        "CT log subdomain enumeration",
+        "Common subdomain enumeration",
+        "DKIM records",
+        "DMARC record",
+        "Recent certificate issuance",
+        "SPF record"
+      ],
+      "evidence_types": [
+        "Risk register",
+        "Threat model document",
+        "Annual risk review minutes"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(b)",
+      "title": "Incident handling",
+      "checks": [
+        "Exposed .git directory",
+        "Sensitive file exposure",
+        "security.txt (RFC 9116)"
+      ],
+      "evidence_types": [
+        "Incident response runbook",
+        "Post-incident review reports",
+        "Notification log"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(d)",
+      "title": "Supply chain security",
+      "checks": [
+        "CORS credential reflection",
+        "CORS policy",
+        "JS library vulnerability summary",
+        "JavaScript library scan",
+        "Subresource Integrity (SRI)"
+      ],
+      "evidence_types": [
+        "Supplier security questionnaires",
+        "DPA contracts",
+        "Subprocessor list"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(e)",
+      "title": "Network \u0026 information system security (acquisition, development \u0026 maintenance)",
+      "checks": [
+        "Active subdomains",
+        "COOP enforcement level",
+        "CT log subdomain enumeration",
+        "Common subdomain enumeration",
+        "Connection",
+        "DKIM records",
+        "DMARC record",
+        "DNS zone transfer",
+        "DNSSEC",
+        "HSTS",
+        "HSTS preload list",
+        "HSTS strength",
+        "HTTP to HTTPS redirect",
+        "HTTP/2 support",
+        "HTTPS response",
+        "Insecure form action",
+        "MX records",
+        "Mixed content",
+        "Nameservers",
+        "SPF record",
+        "Stale subdomain detection",
+        "Subdomain security posture",
+        "TLS version",
+        "WAF/CDN detection"
+      ],
+      "evidence_types": [
+        "Network architecture diagrams",
+        "TLS configuration audits",
+        "DNS health monitoring screenshots"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(f)",
+      "title": "Policies \u0026 procedures to assess effectiveness of cybersecurity risk-management measures",
+      "checks": [
+        "API endpoint exposure",
+        "Admin panel exposure",
+        "Dangerous HTTP methods",
+        "Directory listing",
+        "Exposed .git directory",
+        "HTTP methods",
+        "Host header injection",
+        "JS library vulnerability summary",
+        "JavaScript libraries detected",
+        "JavaScript library scan",
+        "Open redirect",
+        "Rate limiting",
+        "Reflected XSS",
+        "SQL injection error disclosure",
+        "SQL injection patterns",
+        "Sensitive file exposure",
+        "Source map exposure",
+        "Stale subdomain detection",
+        "XSS reflection"
+      ],
+      "evidence_types": [
+        "Vulnerability scan reports",
+        "Penetration test reports",
+        "Patch management policy"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(g)",
+      "title": "Basic cyber hygiene practices and cybersecurity training",
+      "checks": [
+        "API Content-Type security",
+        "COOP enforcement level",
+        "CSP",
+        "CSP base-uri",
+        "CSP depth",
+        "CSP object-src",
+        "CSP quality",
+        "CSP reporting",
+        "Cache-Control",
+        "Clickjacking protection",
+        "Cross-Origin-Embedder-Policy",
+        "Cross-Origin-Opener-Policy",
+        "Cross-Origin-Resource-Policy",
+        "Cross-origin isolation",
+        "Deprecated security headers",
+        "Error page information leakage",
+        "Legacy X-XSS-Protection header",
+        "MIME sniffing protection",
+        "Permissions policy",
+        "Permissions-Policy depth",
+        "Referrer policy",
+        "Referrer policy strength",
+        "Robots.txt sensitive paths",
+        "Server header",
+        "Source map exposure",
+        "Technology fingerprint",
+        "WAF/CDN detection",
+        "X-Download-Options",
+        "X-Frame-Options quality",
+        "X-Powered-By header",
+        "robots.txt"
+      ],
+      "evidence_types": [
+        "Security training records",
+        "Awareness campaign materials",
+        "Phishing test results"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(h)",
+      "title": "Policies \u0026 procedures regarding the use of cryptography and, where appropriate, encryption",
+      "checks": [
+        "CA diversity",
+        "CAA record",
+        "CT log query",
+        "Certificate Transparency",
+        "Certificate chain (self-signed)",
+        "Certificate chain completeness",
+        "Certificate expiry",
+        "Certificate issuer",
+        "Certificate key size",
+        "Certificate validity",
+        "Cipher suite",
+        "Connection",
+        "Deprecated Expect-CT header",
+        "Deprecated HPKP header",
+        "Deprecated HPKP-RO header",
+        "HSTS",
+        "HSTS preload list",
+        "HSTS strength",
+        "Insecure form action",
+        "OCSP stapling",
+        "Recent certificate issuance",
+        "Signature algorithm",
+        "Strong cipher suites",
+        "Subdomain security posture",
+        "TLS 1.0 Supported",
+        "TLS 1.1 Supported",
+        "TLS 1.3 support",
+        "TLS SAN extraction",
+        "TLS session resumption",
+        "TLS version",
+        "Weak TLS versions",
+        "Weak cipher suites"
+      ],
+      "evidence_types": [
+        "Cryptography policy",
+        "Cipher inventory",
+        "Certificate lifecycle records"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(i)",
+      "title": "Human resources security, access control policies \u0026 asset management",
+      "checks": [
+        "Admin panel exposure",
+        "CORS credential reflection",
+        "Clear-Site-Data on logout",
+        "Cookie prefix security",
+        "Cookie security",
+        "Rate limiting"
+      ],
+      "evidence_types": [
+        "Access review reports",
+        "RBAC matrix",
+        "Asset inventory"
+      ]
+    },
+    {
+      "control": "NIS2 Art.21(2)(j)",
+      "title": "Use of MFA, secured voice/video/text comms, secured emergency comms",
+      "checks": [
+        "Clear-Site-Data on logout",
+        "Cookie security",
+        "Well-known change password URL"
+      ],
+      "evidence_types": [
+        "MFA enforcement policy",
+        "Secure comms inventory",
+        "Emergency comms procedure"
+      ]
+    }
+  ]
+}
