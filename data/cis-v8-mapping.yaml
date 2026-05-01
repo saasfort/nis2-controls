@@ -1,0 +1,284 @@
+$schema: https://saasfort.com/schemas/nis2-control-library-v1.json
+title: SaaSFort CIS Controls v8 Mapping
+source: Center for Internet Security Critical Security Controls v8.1 — externally-observable safeguards only
+generated_at: '2026-05-02T00:00:00Z'
+license: MIT
+repository: https://github.com/welcome-archon/nis2-controls
+scope_note: CIS Controls v8 contains 18 top-level controls and 153 safeguards. This file maps only the controls whose safeguards have an externally-observable component. Internal controls (e.g. CIS-08 Audit
+  Log Management, CIS-10 Malware Defenses, CIS-11 Data Recovery) are intentionally omitted because no external scanner can verify them.
+controls:
+- control: CIS-01
+  title: Inventory and Control of Enterprise Assets
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - Active subdomains
+  - CT log query
+  - CT log subdomain enumeration
+  - Common subdomain enumeration
+  - DNS zone transfer
+  - MX records
+  - Nameservers
+  - Stale subdomain detection
+  - Subdomain security posture
+  evidence_types:
+  - Asset inventory export with last-seen timestamps
+  - External attack-surface report
+  - DNS zone register
+  - Reconciliation log against authoritative inventory
+- control: CIS-02
+  title: Inventory and Control of Software Assets
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - JavaScript libraries detected
+  - JavaScript library scan
+  - Server header
+  - Technology fingerprint
+  - X-Powered-By header
+  evidence_types:
+  - Software asset inventory (SBOM)
+  - Dependency review minutes
+  - Allow-list of approved JS libraries
+  - Software supply-chain attestations
+- control: CIS-03
+  title: Data Protection
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - Cache-Control
+  - Cipher suite
+  - HSTS
+  - HSTS preload list
+  - HSTS strength
+  - HTTP to HTTPS redirect
+  - Mixed content
+  - Strong cipher suites
+  - TLS 1.3 support
+  - TLS version
+  - Weak TLS versions
+  - Weak cipher suites
+  evidence_types:
+  - Data classification policy
+  - Encryption-in-transit standard
+  - Cipher allow-list
+  - Data flow diagrams
+- control: CIS-04
+  title: Secure Configuration of Enterprise Assets and Software
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - API Content-Type security
+  - Clickjacking protection
+  - Deprecated security headers
+  - Error page information leakage
+  - Legacy X-XSS-Protection header
+  - MIME sniffing protection
+  - Permissions policy
+  - Permissions-Policy depth
+  - Referrer policy
+  - Referrer policy strength
+  - Server header
+  - X-Download-Options
+  - X-Frame-Options quality
+  - X-Powered-By header
+  evidence_types:
+  - Hardening baseline (CIS Benchmark)
+  - Configuration management database (CMDB) snapshot
+  - Drift-detection report
+  - Approved-image registry
+- control: CIS-05
+  title: Account Management
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - Admin panel exposure
+  - Clear-Site-Data on logout
+  - Cookie prefix security
+  - Cookie security
+  - Well-known change password URL
+  evidence_types:
+  - Account inventory
+  - Joiner-mover-leaver workflow logs
+  - Service-account register
+  - Quarterly account review minutes
+- control: CIS-06
+  title: Access Control Management
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - Admin panel exposure
+  - CORS credential reflection
+  - CORS policy
+  - Rate limiting
+  evidence_types:
+  - Access-control policy
+  - Privileged access management (PAM) logs
+  - MFA enforcement evidence
+  - Role-based access matrix
+- control: CIS-07
+  title: Continuous Vulnerability Management
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - Deprecated Expect-CT header
+  - Deprecated HPKP header
+  - Deprecated HPKP-RO header
+  - Deprecated security headers
+  - Exposed .git directory
+  - JS library vulnerability summary
+  - JavaScript library scan
+  - Sensitive file exposure
+  - Source map exposure
+  - TLS 1.0 Supported
+  - TLS 1.1 Supported
+  - Weak TLS versions
+  evidence_types:
+  - Vulnerability management policy
+  - Authenticated/unauthenticated scan reports
+  - Patch SLA dashboard
+  - Risk-acceptance register for known issues
+- control: CIS-09
+  title: Email and Web Browser Protections
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - DKIM records
+  - DMARC record
+  - MX records
+  - SPF record
+  evidence_types:
+  - Email security gateway configuration
+  - DMARC reporting (rua/ruf) review
+  - Browser hardening baseline
+  - Web filtering policy
+- control: CIS-12
+  title: Network Infrastructure Management
+  implementation_groups:
+  - IG2
+  - IG3
+  checks:
+  - CAA record
+  - DNS zone transfer
+  - DNSSEC
+  - Nameservers
+  - Subdomain security posture
+  evidence_types:
+  - Network architecture diagram
+  - Routing/peering documentation
+  - DNS provider security review
+  - Change-management log for network devices
+- control: CIS-13
+  title: Network Monitoring and Defense
+  implementation_groups:
+  - IG2
+  - IG3
+  checks:
+  - Rate limiting
+  - Stale subdomain detection
+  - WAF/CDN detection
+  evidence_types:
+  - WAF rule set and tuning log
+  - SIEM/IDS coverage matrix
+  - Threat-intel ingestion record
+  - DDoS protection contract / configuration
+- control: CIS-15
+  title: Service Provider Management
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - CA diversity
+  - JS library vulnerability summary
+  - JavaScript libraries detected
+  - Subresource Integrity (SRI)
+  evidence_types:
+  - Vendor risk register
+  - Third-party security questionnaires
+  - DPA / sub-processor list
+  - Service-provider exit plan
+- control: CIS-16
+  title: Application Software Security
+  implementation_groups:
+  - IG2
+  - IG3
+  checks:
+  - API Content-Type security
+  - API endpoint exposure
+  - CORS credential reflection
+  - CORS policy
+  - CSP
+  - CSP base-uri
+  - CSP depth
+  - CSP object-src
+  - CSP quality
+  - CSP reporting
+  - Cross-Origin-Embedder-Policy
+  - Cross-Origin-Opener-Policy
+  - Cross-Origin-Resource-Policy
+  - Cross-origin isolation
+  - Dangerous HTTP methods
+  - Directory listing
+  - HTTP methods
+  - Host header injection
+  - Insecure form action
+  - Open redirect
+  - Reflected XSS
+  - SQL injection error disclosure
+  - SQL injection patterns
+  - Subresource Integrity (SRI)
+  - XSS reflection
+  evidence_types:
+  - Secure SDLC policy
+  - OWASP ASVS evidence
+  - Pre-production security gates (SAST/DAST/SCA reports)
+  - Threat model per major release
+- control: CIS-17
+  title: Incident Response Management
+  implementation_groups:
+  - IG1
+  - IG2
+  - IG3
+  checks:
+  - security.txt (RFC 9116)
+  evidence_types:
+  - Incident response plan
+  - Tabletop exercise report
+  - Disclosure / vulnerability handling policy
+  - Post-incident review template
+- control: CIS-18
+  title: Penetration Testing
+  implementation_groups:
+  - IG2
+  - IG3
+  checks:
+  - Admin panel exposure
+  - Dangerous HTTP methods
+  - Directory listing
+  - Exposed .git directory
+  - HTTP methods
+  - Open redirect
+  - Sensitive file exposure
+  - Source map exposure
+  evidence_types:
+  - Annual external penetration test report
+  - Internal red-team report
+  - Bug bounty program statistics
+  - Remediation tracker for pentest findings

@@ -202,9 +202,61 @@ This is the *manual* — extracted from a production scanner so the mapping is g
 
 ---
 
+---
+
+## BSI IT-Grundschutz baseline mapping
+
+The German BSI IT-Grundschutz Kompendium structures controls as **Bausteine** (modules) — APP for applications, NET for networks, CON for concepts, ORP for organisation/personnel, OPS for operations, DER for detection. We map only the modules whose requirements have an externally observable component:
+
+| Module | Title | Externally observable? |
+|---|---|---|
+| APP.3.1 | Web applications | Partially — XSS, SQLi, exposure |
+| APP.3.2 | Web servers | Yes — security headers, TLS |
+| APP.5.1 | General e-mail | Yes — SPF, DKIM, DMARC, MX |
+| CON.1 | Cryptographic concept | Yes — TLS, certificates, ciphers |
+| CON.10 | Web application development | Yes — CSP, CORS, SRI, JS libs |
+| DER.1 | Detection of security events | Partially — WAF, rate limiting |
+| NET.1.1 | Network architecture & design | Yes — DNS, subdomains, DNSSEC |
+| OPS.1.1.3 | Patch & change management | Partially — deprecated headers, lib versions |
+| OPS.1.2.6 | Incident response | Partially — security.txt, exposure tells |
+| ORP.4 | Identity & access management | Partially — admin panels, cookies |
+
+For each module, `data/bsi-it-grundschutz-mapping.json` lists the SaaSFort checks that contribute evidence and the auditor-facing evidence types that pair with the technical signal. Modules covering pure organisational, physical or procedural controls (e.g. ISMS.1, ORP.1, INF.*) are intentionally absent — no external scanner can verify them.
+
+Authoritative reference: BSI IT-Grundschutz Kompendium ([bsi.bund.de/grundschutz](https://www.bsi.bund.de/dok/IT-Grundschutz-Kompendium-en)).
+
+---
+
+## CIS Controls v8 mapping
+
+The Center for Internet Security publishes 18 top-level controls and 153 safeguards, grouped into Implementation Groups (IG1 / IG2 / IG3) by maturity. We map only the controls with at least one externally-observable safeguard:
+
+| Control | Title | Why externally observable |
+|---|---|---|
+| CIS-01 | Inventory & control of enterprise assets | DNS, CT logs, subdomain enumeration |
+| CIS-02 | Inventory & control of software assets | JS libraries, server header fingerprints |
+| CIS-03 | Data protection | HSTS, TLS configuration, encryption-in-transit |
+| CIS-04 | Secure configuration | Security headers, error pages |
+| CIS-05 | Account management | Cookie security, admin panel exposure |
+| CIS-06 | Access control management | CORS, rate limiting, admin panels |
+| CIS-07 | Continuous vulnerability management | Lib vulnerabilities, exposure, deprecated headers |
+| CIS-09 | Email & web browser protections | SPF, DKIM, DMARC, MX |
+| CIS-12 | Network infrastructure management | DNSSEC, nameservers, CAA |
+| CIS-13 | Network monitoring & defense | WAF/CDN, rate limiting |
+| CIS-15 | Service provider management | Third-party JS, SRI, CA diversity |
+| CIS-16 | Application software security | CSP, CORS, OWASP Top 10 signals |
+| CIS-17 | Incident response management | security.txt |
+| CIS-18 | Penetration testing | Reachability of admin/dev paths |
+
+CIS-08 (Audit Logs), CIS-10 (Malware Defenses), CIS-11 (Data Recovery) and CIS-14 (Security Awareness) are intentionally absent: no public-facing scan can verify whether an organisation logs its events, runs EDR, tests its backups or trains its staff. They remain the auditor's job, not the scanner's.
+
+Authoritative reference: CIS Critical Security Controls v8.1 ([cisecurity.org/controls](https://www.cisecurity.org/controls)).
+
+---
+
 ## How to use this handbook in an audit
 
-1. Pick the control (e.g. NIS2 Art.21(2)(h) cryptography).
+1. Pick the control (e.g. NIS2 Art.21(2)(h) cryptography, BSI CON.1, or CIS-03).
 2. Run a scan with any tool that maps to this library (or use [SaaSFort](https://saasfort.com)).
 3. Pair scan findings with the evidence-type list to assemble the audit packet.
 4. Document deviations explicitly — auditors prefer "we considered X and rejected it for Y" over silence.
@@ -213,5 +265,5 @@ This is the *manual* — extracted from a production scanner so the mapping is g
 
 This handbook tracks the SaaSFort scan engine. As we add new checks (and there are 100+ today), this file is regenerated automatically and PRs are welcome to enrich the handbook prose.
 
-Source repository: https://github.com/saasfort/nis2-controls
+Source repository: https://github.com/welcome-archon/nis2-controls
 Maintained by: [SaaSFort](https://saasfort.com)

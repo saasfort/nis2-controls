@@ -1,0 +1,257 @@
+{
+  "$schema": "https://saasfort.com/schemas/nis2-control-library-v1.json",
+  "title": "SaaSFort BSI IT-Grundschutz Baseline Mapping",
+  "source": "BSI IT-Grundschutz Kompendium (Edition 2023) — module requirements (Anforderungen) for externally observable controls",
+  "generated_at": "2026-05-02T00:00:00Z",
+  "license": "MIT",
+  "repository": "https://github.com/welcome-archon/nis2-controls",
+  "scope_note": "BSI IT-Grundschutz covers organisational, physical and procedural controls that no external scanner can verify. This file maps only the modules whose requirements (R1/R2) are partially or fully externally observable. Use the HANDBOOK.md for the full module-by-module narrative.",
+  "controls": [
+    {
+      "control": "BSI APP.3.1",
+      "title": "Webanwendungen — Web applications",
+      "category": "APP",
+      "checks": [
+        "API endpoint exposure",
+        "Admin panel exposure",
+        "Dangerous HTTP methods",
+        "Directory listing",
+        "Error page information leakage",
+        "Exposed .git directory",
+        "HTTP methods",
+        "Host header injection",
+        "Open redirect",
+        "Reflected XSS",
+        "SQL injection error disclosure",
+        "SQL injection patterns",
+        "Sensitive file exposure",
+        "Source map exposure",
+        "XSS reflection",
+        "robots.txt"
+      ],
+      "evidence_types": [
+        "BSI APP.3.1.A1 minutes (production deployment authorization)",
+        "Web application threat model (BSI APP.3.1.A4)",
+        "Penetration test report covering OWASP Top 10",
+        "Secure development lifecycle policy"
+      ]
+    },
+    {
+      "control": "BSI APP.3.2",
+      "title": "Webserver — Web server hardening",
+      "category": "APP",
+      "checks": [
+        "API Content-Type security",
+        "Cache-Control",
+        "Clickjacking protection",
+        "Deprecated security headers",
+        "HSTS",
+        "HSTS preload list",
+        "HSTS strength",
+        "HTTP to HTTPS redirect",
+        "HTTP/2 support",
+        "HTTPS response",
+        "Legacy X-XSS-Protection header",
+        "MIME sniffing protection",
+        "Permissions policy",
+        "Permissions-Policy depth",
+        "Referrer policy",
+        "Referrer policy strength",
+        "Robots.txt sensitive paths",
+        "Server header",
+        "Technology fingerprint",
+        "X-Download-Options",
+        "X-Frame-Options quality",
+        "X-Powered-By header"
+      ],
+      "evidence_types": [
+        "Web-server hardening checklist (BSI APP.3.2.A1)",
+        "Server configuration baseline document",
+        "Change-management log of server upgrades",
+        "TLS configuration audit"
+      ]
+    },
+    {
+      "control": "BSI CON.1",
+      "title": "Krypto-Konzept — Cryptographic concept",
+      "category": "CON",
+      "checks": [
+        "CA diversity",
+        "CAA record",
+        "Certificate chain (self-signed)",
+        "Certificate chain completeness",
+        "Certificate expiry",
+        "Certificate issuer",
+        "Certificate key size",
+        "Certificate validity",
+        "Cipher suite",
+        "Connection",
+        "Deprecated Expect-CT header",
+        "Deprecated HPKP header",
+        "Deprecated HPKP-RO header",
+        "OCSP stapling",
+        "Recent certificate issuance",
+        "Signature algorithm",
+        "Strong cipher suites",
+        "TLS 1.0 Supported",
+        "TLS 1.1 Supported",
+        "TLS 1.3 support",
+        "TLS SAN extraction",
+        "TLS session resumption",
+        "TLS version",
+        "Weak TLS versions",
+        "Weak cipher suites"
+      ],
+      "evidence_types": [
+        "Crypto concept document (BSI CON.1.A1)",
+        "Cipher inventory and approved-algorithms list",
+        "Certificate lifecycle and rotation log",
+        "Key-management policy"
+      ]
+    },
+    {
+      "control": "BSI CON.10",
+      "title": "Entwicklung von Webanwendungen — Web application development",
+      "category": "CON",
+      "checks": [
+        "CORS credential reflection",
+        "CORS policy",
+        "CSP",
+        "CSP base-uri",
+        "CSP depth",
+        "CSP object-src",
+        "CSP quality",
+        "CSP reporting",
+        "Cross-Origin-Embedder-Policy",
+        "Cross-Origin-Opener-Policy",
+        "Cross-Origin-Resource-Policy",
+        "Cross-origin isolation",
+        "Insecure form action",
+        "JS library vulnerability summary",
+        "JavaScript libraries detected",
+        "JavaScript library scan",
+        "Mixed content",
+        "Subresource Integrity (SRI)"
+      ],
+      "evidence_types": [
+        "Secure web-application development guideline (BSI CON.10.A2)",
+        "Dependency review and SBOM",
+        "Secure-coding training records",
+        "Code-review checklist"
+      ]
+    },
+    {
+      "control": "BSI DER.1",
+      "title": "Detektion von sicherheitsrelevanten Ereignissen — Detection of security-relevant events",
+      "category": "DER",
+      "checks": [
+        "Rate limiting",
+        "Stale subdomain detection",
+        "WAF/CDN detection"
+      ],
+      "evidence_types": [
+        "Detection concept document (BSI DER.1.A1)",
+        "WAF/SIEM rule catalogue",
+        "Anomaly detection runbook",
+        "Incident escalation playbook"
+      ]
+    },
+    {
+      "control": "BSI NET.1.1",
+      "title": "Netzarchitektur und -design — Network architecture and design",
+      "category": "NET",
+      "checks": [
+        "Active subdomains",
+        "CT log query",
+        "CT log subdomain enumeration",
+        "Common subdomain enumeration",
+        "DNS zone transfer",
+        "DNSSEC",
+        "MX records",
+        "Nameservers",
+        "Stale subdomain detection",
+        "Subdomain security posture"
+      ],
+      "evidence_types": [
+        "Network architecture diagram (BSI NET.1.1.A1)",
+        "DNS zone documentation",
+        "Asset register of public-facing systems",
+        "Network segmentation map"
+      ]
+    },
+    {
+      "control": "BSI ORP.4",
+      "title": "Identitäts- und Berechtigungsmanagement — Identity and access management",
+      "category": "ORP",
+      "checks": [
+        "Admin panel exposure",
+        "Clear-Site-Data on logout",
+        "Cookie prefix security",
+        "Cookie security",
+        "Well-known change password URL"
+      ],
+      "evidence_types": [
+        "Access concept (BSI ORP.4.A1)",
+        "Role/permission matrix (RBAC)",
+        "Joiner-mover-leaver process",
+        "Privileged-access review log"
+      ]
+    },
+    {
+      "control": "BSI OPS.1.1.3",
+      "title": "Patch- und Änderungsmanagement — Patch and change management",
+      "category": "OPS",
+      "checks": [
+        "Deprecated Expect-CT header",
+        "Deprecated HPKP header",
+        "Deprecated HPKP-RO header",
+        "Deprecated security headers",
+        "JS library vulnerability summary",
+        "JavaScript library scan",
+        "Legacy X-XSS-Protection header",
+        "TLS 1.0 Supported",
+        "TLS 1.1 Supported",
+        "Weak TLS versions"
+      ],
+      "evidence_types": [
+        "Patch management policy (BSI OPS.1.1.3.A1)",
+        "Change-advisory-board minutes",
+        "Vulnerability management dashboard exports",
+        "Tested rollback procedure"
+      ]
+    },
+    {
+      "control": "BSI APP.5.1",
+      "title": "Allgemeine E-Mail — General e-mail",
+      "category": "APP",
+      "checks": [
+        "DKIM records",
+        "DMARC record",
+        "MX records",
+        "SPF record"
+      ],
+      "evidence_types": [
+        "E-mail policy and acceptable use",
+        "Mail-flow architecture document",
+        "DMARC enforcement plan",
+        "Anti-spoofing review log"
+      ]
+    },
+    {
+      "control": "BSI OPS.1.2.6",
+      "title": "Reaktion auf sicherheitsrelevante Vorfälle — Incident response",
+      "category": "OPS",
+      "checks": [
+        "Exposed .git directory",
+        "Sensitive file exposure",
+        "security.txt (RFC 9116)"
+      ],
+      "evidence_types": [
+        "Incident response plan (BSI OPS.1.2.6.A1)",
+        "Disclosure / vulnerability handling policy",
+        "Post-incident report template",
+        "On-call rota and escalation matrix"
+      ]
+    }
+  ]
+}

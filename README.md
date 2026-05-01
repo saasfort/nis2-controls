@@ -1,30 +1,53 @@
 # nis2-controls
 
-A free, open-source NIS2 Article 21 control library for security tooling, GRC platforms, and CI/CD pipelines.
+A free, open-source compliance control library for NIS2, ISO 27001:2022, BSI IT-Grundschutz and CIS Controls v8 — **tied to a working scanner** so every check has a real-world technical signal behind it.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## What this is
 
-A machine-readable mapping of **technical security checks → NIS2 Directive Article 21 controls** (and **ISO 27001:2022 Annex A**), extracted from the [SaaSFort](https://saasfort.com) production scan engine.
+Machine-readable mappings of **technical security checks → regulatory controls**, extracted from the [SaaSFort](https://saasfort.com) production scan engine.
 
-If you're building a security tool, GRC platform, audit checklist, or CI/CD security gate, you can use this mapping to label every finding with the regulatory control it satisfies — without re-doing the legal research yourself.
+We ship four mappings out of the box:
+
+- **NIS2 Directive (EU) 2022/2555 Article 21** — 9 controls (a–j, minus §c)
+- **ISO 27001:2022 Annex A** — 12 controls
+- **BSI IT-Grundschutz Kompendium** (Edition 2023) — 10 modules (Bausteine)
+- **CIS Controls v8.1** — 14 controls with IG1/IG2/IG3 implementation groups
+
+If you're building a security tool, GRC platform, audit checklist, or CI/CD security gate, you can use these mappings to label every finding with the regulatory control it satisfies — without redoing the legal research yourself.
+
+## How this is different from other OSS
+
+Several OSS projects offer NIS2 / ISO 27001 / BSI control catalogues — `intuitem/ciso-assistant-community` (130+ frameworks GRC platform), `coolstartnow/isms-builder` (self-hosted ISMS), and BSI's own NIS2-to-ISO/IEC 27001 mapping PDF. They're excellent for policy and gap analysis.
+
+This library is different in three ways:
+
+1. **Tied to a working scanner.** Every mapping entry references a real check name from a production scan engine (60 checks across 21 categories). The mapping isn't aspirational — if a check is in the JSON, the scanner produces a finding for it today.
+2. **Four-framework crosswalk in one file.** Most OSS focuses on one or two frameworks. We ship NIS2 + ISO 27001 + BSI IT-Grundschutz + CIS v8 in identical schema so you can crosswalk a single finding to all four with one lookup.
+3. **JSON + YAML, optimized for automation.** Designed to drop into CI/CD, GRC platforms, or audit tooling — not just to read.
 
 ## What's included
 
 ```
 data/
-  nis2-controls.json        # NIS2 Article 21 control → checks (machine-readable)
-  nis2-controls.yaml        # same, in YAML
-  iso27001-mapping.json     # ISO 27001:2022 Annex A control → checks
-  iso27001-mapping.yaml     # same, in YAML
-HANDBOOK.md                 # human-readable explanation per control + evidence types
+  nis2-controls.json                  # NIS2 Article 21 control → checks
+  nis2-controls.yaml
+  iso27001-mapping.json               # ISO 27001:2022 Annex A control → checks
+  iso27001-mapping.yaml
+  bsi-it-grundschutz-mapping.json     # BSI IT-Grundschutz Bausteine → checks
+  bsi-it-grundschutz-mapping.yaml
+  cis-v8-mapping.json                 # CIS Controls v8 (IG1/IG2/IG3) → checks
+  cis-v8-mapping.yaml
+HANDBOOK.md                           # human-readable explanation per control
 ```
 
 **Coverage** (auto-generated):
 
-- **9 NIS2 Article 21 controls** mapped (a–j, less §c which is policy-level not technically auto-checkable)
-- **12 ISO 27001:2022 Annex A controls** mapped
+- **9** NIS2 Article 21 controls
+- **12** ISO 27001:2022 Annex A controls
+- **10** BSI IT-Grundschutz modules (APP, NET, CON, DER, ORP, OPS)
+- **14** CIS Controls v8 controls (IG1–IG3)
 - **103 unique technical checks** covering TLS, DNS, security headers, OWASP Top 10, certificate transparency, supply chain, and more
 
 ## What this is NOT
@@ -44,7 +67,7 @@ Use this library to **label** findings from your own scanner. If you want a turn
 ### JavaScript / TypeScript
 
 ```bash
-curl -sL https://raw.githubusercontent.com/saasfort/nis2-controls/main/data/nis2-controls.json -o nis2-controls.json
+curl -sL https://raw.githubusercontent.com/welcome-archon/nis2-controls/main/data/nis2-controls.json -o nis2-controls.json
 ```
 
 ```js
@@ -61,7 +84,7 @@ console.log(article.title);   // "Network & information system security..."
 ```python
 import json, urllib.request
 data = json.load(urllib.request.urlopen(
-    "https://raw.githubusercontent.com/saasfort/nis2-controls/main/data/nis2-controls.json"))
+    "https://raw.githubusercontent.com/welcome-archon/nis2-controls/main/data/nis2-controls.json"))
 
 for ctrl in data["controls"]:
     print(f"{ctrl['control']} — {ctrl['title']}")
@@ -72,11 +95,11 @@ for ctrl in data["controls"]:
 ### Go
 
 ```bash
-go install github.com/saasfort/nis2-controls/cmd/...@latest
+go install github.com/welcome-archon/nis2-controls/cmd/...@latest
 ```
 
 ```go
-import "github.com/saasfort/nis2-controls"
+import "github.com/welcome-archon/nis2-controls"
 mapping := nis2controls.LoadNIS2()
 ```
 
@@ -88,13 +111,27 @@ title: SaaSFort NIS2 Article 21 Control Library
 source: NIS2 Directive (EU) 2022/2555 Article 21
 generated_at: 2026-04-28T00:00:00Z
 license: MIT
-repository: https://github.com/saasfort/nis2-controls
+repository: https://github.com/welcome-archon/nis2-controls
 controls:
   - control: "NIS2 Art.21(2)(e)"
     title: "Network & information system security..."
     checks: ["DKIM records", "DMARC record", "HSTS", "..."]
     evidence_types: ["Network architecture diagrams", "TLS configuration audits", "..."]
 ```
+
+## Live API mirror
+
+The same mapping data is also served from the SaaSFort API for clients that prefer HTTP over a git checkout. Useful for in-product pickers, CI/CD steps, and read-only integrations.
+
+```
+GET https://api.saasfort.com/api/nis2/controls
+GET https://api.saasfort.com/api/nis2/controls/nis2
+GET https://api.saasfort.com/api/nis2/controls/iso27001
+GET https://api.saasfort.com/api/nis2/controls/bsi
+GET https://api.saasfort.com/api/nis2/controls/cis-v8
+```
+
+Response is identical to the JSON files in `data/`. CORS is wide-open (`Access-Control-Allow-Origin: *`) and responses are cached for one hour.
 
 ## Contributing
 
