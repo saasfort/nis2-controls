@@ -39,7 +39,13 @@ data/
   bsi-it-grundschutz-mapping.yaml
   cis-v8-mapping.json                 # CIS Controls v8 (IG1/IG2/IG3) → checks
   cis-v8-mapping.yaml
+  check-crosswalk.json                # NEW: per-check inverted index across all 4 frameworks
+  check-crosswalk.yaml
+examples/
+  python/lookup.py                    # zero-dependency CLI lookup (Python 3.10+)
+  javascript/lookup.js                # zero-dependency CLI lookup (Node 18+)
 HANDBOOK.md                           # human-readable explanation per control
+CHANGELOG.md                          # release notes
 ```
 
 **Coverage** (auto-generated):
@@ -49,6 +55,23 @@ HANDBOOK.md                           # human-readable explanation per control
 - **10** BSI IT-Grundschutz modules (APP, NET, CON, DER, ORP, OPS)
 - **14** CIS Controls v8 controls (IG1–IG3)
 - **103 unique technical checks** covering TLS, DNS, security headers, OWASP Top 10, certificate transparency, supply chain, and more
+- **85 of 103 checks** map to all four frameworks (true crosswalk coverage)
+
+## One-lookup multi-framework labelling
+
+`data/check-crosswalk.json` is the inverted index. For any check name, you get every control across all four frameworks in one read:
+
+```bash
+$ python3 examples/python/lookup.py "HSTS"
+
+HSTS  → 4 frameworks
+  nis2      : NIS2 Art.21(2)(e), NIS2 Art.21(2)(h)
+  iso27001  : ISO27001 A.8.20, ISO27001 A.8.24
+  bsi       : BSI APP.3.2
+  cis-v8    : CIS-03
+```
+
+This is the value the README's "four-framework crosswalk in one schema" claim points at — a single lookup gives auditors, GRC platforms, and CI tools the multi-framework label per finding.
 
 ## What this is NOT
 

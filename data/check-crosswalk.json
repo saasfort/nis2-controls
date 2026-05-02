@@ -1,0 +1,1927 @@
+{
+  "$schema": "https://saasfort.com/schemas/nis2-control-library-v1.json",
+  "title": "SaaSFort Cross-Framework Check Crosswalk",
+  "description": "Inverted index: per check, lists every control across NIS2 Art.21, ISO 27001:2022 Annex A, BSI IT-Grundschutz Bausteine, and CIS Controls v8 that references it. Use this for one-lookup multi-framework labelling of scan findings.",
+  "generated_at": "2026-05-02T01:06:31Z",
+  "license": "MIT",
+  "repository": "https://github.com/welcome-archon/nis2-controls",
+  "stats": {
+    "total_unique_checks": 103,
+    "covered_in_all_4_frameworks": 85,
+    "covered_in_3_frameworks": 16,
+    "covered_in_2_frameworks": 2,
+    "covered_in_1_framework": 0
+  },
+  "frameworks": [
+    "nis2",
+    "iso27001",
+    "bsi",
+    "cis-v8"
+  ],
+  "checks": [
+    {
+      "check": "API Content-Type security",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04",
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "API endpoint exposure",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.8",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Active subdomains",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.7",
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Admin panel exposure",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)",
+          "NIS2 Art.21(2)(i)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.5",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1",
+          "BSI ORP.4"
+        ],
+        "cis-v8": [
+          "CIS-05",
+          "CIS-06",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CA diversity",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.7",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ],
+        "cis-v8": [
+          "CIS-15"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CAA record",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ],
+        "cis-v8": [
+          "CIS-12"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "COOP enforcement level",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ]
+      },
+      "framework_count": 2
+    },
+    {
+      "check": "CORS credential reflection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(d)",
+          "NIS2 Art.21(2)(i)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.21",
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-06",
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CORS policy",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(d)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-06",
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CSP",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26",
+          "ISO27001 A.8.28"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CSP base-uri",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CSP depth",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CSP object-src",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CSP quality",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26",
+          "ISO27001 A.8.28"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CSP reporting",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CT log query",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.7",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "CT log subdomain enumeration",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.7",
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Cache-Control",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Certificate Transparency",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ]
+      },
+      "framework_count": 2
+    },
+    {
+      "check": "Certificate chain (self-signed)",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Certificate chain completeness",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Certificate expiry",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Certificate issuer",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Certificate key size",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Certificate validity",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Cipher suite",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Clear-Site-Data on logout",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(i)",
+          "NIS2 Art.21(2)(j)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26",
+          "ISO27001 A.8.5"
+        ],
+        "bsi": [
+          "BSI ORP.4"
+        ],
+        "cis-v8": [
+          "CIS-05"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Clickjacking protection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Common subdomain enumeration",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.7",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Connection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Cookie prefix security",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(i)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.5"
+        ],
+        "bsi": [
+          "BSI ORP.4"
+        ],
+        "cis-v8": [
+          "CIS-05"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Cookie security",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(i)",
+          "NIS2 Art.21(2)(j)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26",
+          "ISO27001 A.8.5"
+        ],
+        "bsi": [
+          "BSI ORP.4"
+        ],
+        "cis-v8": [
+          "CIS-05"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Cross-Origin-Embedder-Policy",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Cross-Origin-Opener-Policy",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Cross-Origin-Resource-Policy",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Cross-origin isolation",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "DKIM records",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.14",
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI APP.5.1"
+        ],
+        "cis-v8": [
+          "CIS-09"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "DMARC record",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.14",
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI APP.5.1"
+        ],
+        "cis-v8": [
+          "CIS-09"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "DNS zone transfer",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01",
+          "CIS-12"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "DNSSEC",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-12"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Dangerous HTTP methods",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Deprecated Expect-CT header",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Deprecated HPKP header",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI CON.1",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Deprecated HPKP-RO header",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI CON.1",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Deprecated security headers",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-04",
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Directory listing",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.8",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Error page information leakage",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Exposed .git directory",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(b)",
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.8",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1",
+          "BSI OPS.1.2.6"
+        ],
+        "cis-v8": [
+          "CIS-07",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "HSTS",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "HSTS preload list",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "HSTS strength",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "HTTP methods",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "HTTP to HTTPS redirect",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "HTTP/2 support",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "HTTPS response",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Host header injection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.28",
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Insecure form action",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "JS library vulnerability summary",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(d)",
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.21",
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI CON.10",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-07",
+          "CIS-15"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "JavaScript libraries detected",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-02",
+          "CIS-15"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "JavaScript library scan",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(d)",
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.21",
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI CON.10",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-02",
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Legacy X-XSS-Protection header",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI APP.3.2",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "MIME sniffing protection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "MX records",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI APP.5.1",
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01",
+          "CIS-09"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Mixed content",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Nameservers",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01",
+          "CIS-12"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "OCSP stapling",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Open redirect",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.28"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Permissions policy",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Permissions-Policy depth",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Rate limiting",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)",
+          "NIS2 Art.21(2)(i)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI DER.1"
+        ],
+        "cis-v8": [
+          "CIS-06",
+          "CIS-13"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Recent certificate issuance",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.7",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Referrer policy",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.14"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Referrer policy strength",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.14"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Reflected XSS",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.28",
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Robots.txt sensitive paths",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "SPF record",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(a)",
+          "NIS2 Art.21(2)(e)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.14",
+          "ISO27001 A.8.20"
+        ],
+        "bsi": [
+          "BSI APP.5.1"
+        ],
+        "cis-v8": [
+          "CIS-09"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "SQL injection error disclosure",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.28"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "SQL injection patterns",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.28",
+          "ISO27001 A.8.8"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Sensitive file exposure",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(b)",
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.8",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1",
+          "BSI OPS.1.2.6"
+        ],
+        "cis-v8": [
+          "CIS-07",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Server header",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-02",
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Signature algorithm",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "Source map exposure",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)",
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.8",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-07",
+          "CIS-18"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Stale subdomain detection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.8",
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI DER.1",
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01",
+          "CIS-13"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Strong cipher suites",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Subdomain security posture",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI NET.1.1"
+        ],
+        "cis-v8": [
+          "CIS-01",
+          "CIS-12"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Subresource Integrity (SRI)",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(d)"
+        ],
+        "iso27001": [
+          "ISO27001 A.5.21"
+        ],
+        "bsi": [
+          "BSI CON.10"
+        ],
+        "cis-v8": [
+          "CIS-15",
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "TLS 1.0 Supported",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "TLS 1.1 Supported",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "TLS 1.3 support",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "TLS SAN extraction",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "TLS session resumption",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "TLS version",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Technology fingerprint",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-02"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "WAF/CDN detection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(e)",
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.20",
+          "ISO27001 A.8.23"
+        ],
+        "bsi": [
+          "BSI DER.1"
+        ],
+        "cis-v8": [
+          "CIS-13"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Weak TLS versions",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1",
+          "BSI OPS.1.1.3"
+        ],
+        "cis-v8": [
+          "CIS-03",
+          "CIS-07"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Weak cipher suites",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(h)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.24"
+        ],
+        "bsi": [
+          "BSI CON.1"
+        ],
+        "cis-v8": [
+          "CIS-03"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "Well-known change password URL",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(j)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.5"
+        ],
+        "bsi": [
+          "BSI ORP.4"
+        ],
+        "cis-v8": [
+          "CIS-05"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "X-Download-Options",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "X-Frame-Options quality",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.26"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "X-Powered-By header",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.2"
+        ],
+        "cis-v8": [
+          "CIS-02",
+          "CIS-04"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "XSS reflection",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(f)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.28"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ],
+        "cis-v8": [
+          "CIS-16"
+        ]
+      },
+      "framework_count": 4
+    },
+    {
+      "check": "robots.txt",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(g)"
+        ],
+        "iso27001": [
+          "ISO27001 A.8.9"
+        ],
+        "bsi": [
+          "BSI APP.3.1"
+        ]
+      },
+      "framework_count": 3
+    },
+    {
+      "check": "security.txt (RFC 9116)",
+      "controls": {
+        "nis2": [
+          "NIS2 Art.21(2)(b)"
+        ],
+        "iso27001": [
+          "ISO27001 A.6.8"
+        ],
+        "bsi": [
+          "BSI OPS.1.2.6"
+        ],
+        "cis-v8": [
+          "CIS-17"
+        ]
+      },
+      "framework_count": 4
+    }
+  ]
+}
