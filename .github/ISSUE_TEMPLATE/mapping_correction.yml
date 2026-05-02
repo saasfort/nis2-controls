@@ -1,0 +1,50 @@
+name: Mapping correction
+description: Propose a correction to a check → control mapping (NIS2 / ISO 27001 / BSI / CIS-v8 / NIST CSF v2).
+title: "[mapping] "
+labels: ["mapping", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make the mappings sharper. Be specific — the maintainer needs the same rigour an auditor would apply.
+  - type: input
+    id: framework
+    attributes:
+      label: Framework
+      description: One of nis2 | iso27001 | bsi | cis-v8 | nist-csf-v2 | check-crosswalk
+      placeholder: "nis2"
+    validations:
+      required: true
+  - type: input
+    id: control
+    attributes:
+      label: Control ID
+      description: e.g. "NIS2 Art.21(2)(e)" or "ISO27001 A.8.20"
+    validations:
+      required: true
+  - type: input
+    id: check
+    attributes:
+      label: Check name
+      description: As it appears in data/*.json (case-sensitive)
+    validations:
+      required: true
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Change type
+      options:
+        - Add this check to the control
+        - Remove this check from the control
+        - Move this check from one control to another
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale + sources
+      description: Cite the directive / standard text or the auditor expectation that supports the change.
+      placeholder: |
+        e.g. "BSI APP.3.2.A14 explicitly mentions HSTS as a required hardening header, see Kompendium 2023 page 412"
+    validations:
+      required: true

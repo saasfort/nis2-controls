@@ -14,6 +14,7 @@ We ship four mappings out of the box:
 - **ISO 27001:2022 Annex A** — 12 controls
 - **BSI IT-Grundschutz Kompendium** (Edition 2023) — 10 modules (Bausteine)
 - **CIS Controls v8.1** — 14 controls with IG1/IG2/IG3 implementation groups
+- **NIST Cybersecurity Framework v2.0** (Feb 2024) — 9 subcategories with externally-observable signals
 
 If you're building a security tool, GRC platform, audit checklist, or CI/CD security gate, you can use these mappings to label every finding with the regulatory control it satisfies — without redoing the legal research yourself.
 
@@ -39,11 +40,14 @@ data/
   bsi-it-grundschutz-mapping.yaml
   cis-v8-mapping.json                 # CIS Controls v8 (IG1/IG2/IG3) → checks
   cis-v8-mapping.yaml
-  check-crosswalk.json                # NEW: per-check inverted index across all 4 frameworks
+  nist-csf-v2-mapping.json            # NIST Cybersecurity Framework v2.0 → checks
+  nist-csf-v2-mapping.yaml
+  check-crosswalk.json                # per-check inverted index across all 5 frameworks
   check-crosswalk.yaml
 examples/
   python/lookup.py                    # zero-dependency CLI lookup (Python 3.10+)
   javascript/lookup.js                # zero-dependency CLI lookup (Node 18+)
+  go/lookup.go                        # zero-dependency CLI lookup (Go 1.21+)
 HANDBOOK.md                           # human-readable explanation per control
 CHANGELOG.md                          # release notes
 ```
@@ -54,8 +58,9 @@ CHANGELOG.md                          # release notes
 - **12** ISO 27001:2022 Annex A controls
 - **10** BSI IT-Grundschutz modules (APP, NET, CON, DER, ORP, OPS)
 - **14** CIS Controls v8 controls (IG1–IG3)
+- **9** NIST CSF v2.0 subcategories (ID, PR, DE, RS — externally observable only)
 - **103 unique technical checks** covering TLS, DNS, security headers, OWASP Top 10, certificate transparency, supply chain, and more
-- **85 of 103 checks** map to all four frameworks (true crosswalk coverage)
+- **85 of 103 checks** map to all five frameworks (true crosswalk coverage)
 
 ## One-lookup multi-framework labelling
 
@@ -64,12 +69,15 @@ CHANGELOG.md                          # release notes
 ```bash
 $ python3 examples/python/lookup.py "HSTS"
 
-HSTS  → 4 frameworks
-  nis2      : NIS2 Art.21(2)(e), NIS2 Art.21(2)(h)
-  iso27001  : ISO27001 A.8.20, ISO27001 A.8.24
-  bsi       : BSI APP.3.2
-  cis-v8    : CIS-03
+HSTS  → 5 frameworks
+  nis2       : NIS2 Art.21(2)(e), NIS2 Art.21(2)(h)
+  iso27001   : ISO27001 A.8.20, ISO27001 A.8.24
+  bsi        : BSI APP.3.2
+  cis-v8     : CIS-03
+  nist-csf-v2: NIST.PR.DS
 ```
+
+The same lookup is available in Node (`examples/javascript/lookup.js`) and Go (`examples/go/lookup.go`) — all three produce identical output.
 
 This is the value the README's "four-framework crosswalk in one schema" claim points at — a single lookup gives auditors, GRC platforms, and CI tools the multi-framework label per finding.
 

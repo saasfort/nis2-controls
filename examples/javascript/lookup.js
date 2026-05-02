@@ -44,7 +44,7 @@ function parseArgs(argv) {
 }
 
 function help() {
-  console.log("Usage: node lookup.js <check-name> [--framework nis2|iso27001|bsi|cis-v8] [--remote]");
+  console.log("Usage: node lookup.js <check-name> [--framework nis2|iso27001|bsi|cis-v8|nist-csf-v2] [--remote]");
   console.log("       node lookup.js --list-checks [--remote]");
   console.log("       node lookup.js --framework <name> --list-controls [--remote]");
 }
@@ -57,7 +57,7 @@ async function lookupCheck(checkName, framework, remote) {
     console.error(`No checks matching ${JSON.stringify(checkName)}.`);
     process.exit(2);
   }
-  const slugs = framework ? [framework] : ["nis2", "iso27001", "bsi", "cis-v8"];
+  const slugs = framework ? [framework] : ["nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2"];
   for (const c of matches) {
     console.log(`\n${c.check}  → ${c.framework_count} frameworks`);
     for (const s of slugs) {
@@ -78,6 +78,7 @@ async function listControls(framework, remote) {
     iso27001: "iso27001-mapping.json",
     bsi: "bsi-it-grundschutz-mapping.json",
     "cis-v8": "cis-v8-mapping.json",
+    "nist-csf-v2": "nist-csf-v2-mapping.json",
   }[framework];
   if (!fname) {
     console.error(`Unknown framework: ${framework}`);

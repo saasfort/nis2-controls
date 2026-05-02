@@ -1,22 +1,24 @@
 {
   "$schema": "https://saasfort.com/schemas/nis2-control-library-v1.json",
   "title": "SaaSFort Cross-Framework Check Crosswalk",
-  "description": "Inverted index: per check, lists every control across NIS2 Art.21, ISO 27001:2022 Annex A, BSI IT-Grundschutz Bausteine, and CIS Controls v8 that references it. Use this for one-lookup multi-framework labelling of scan findings.",
-  "generated_at": "2026-05-02T01:06:31Z",
+  "description": "Inverted index: per check, lists every control across NIS2 Art.21, ISO 27001:2022 Annex A, BSI IT-Grundschutz Bausteine, CIS Controls v8, and NIST CSF v2 that references it. Use this for one-lookup multi-framework labelling of scan findings.",
+  "generated_at": "2026-05-02T01:12:44Z",
   "license": "MIT",
   "repository": "https://github.com/welcome-archon/nis2-controls",
   "stats": {
     "total_unique_checks": 103,
-    "covered_in_all_4_frameworks": 85,
-    "covered_in_3_frameworks": 16,
-    "covered_in_2_frameworks": 2,
+    "covered_in_all_5_frameworks": 85,
+    "covered_in_4_frameworks": 14,
+    "covered_in_3_frameworks": 3,
+    "covered_in_2_frameworks": 1,
     "covered_in_1_framework": 0
   },
   "frameworks": [
     "nis2",
     "iso27001",
     "bsi",
-    "cis-v8"
+    "cis-v8",
+    "nist-csf-v2"
   ],
   "checks": [
     {
@@ -34,9 +36,12 @@
         "cis-v8": [
           "CIS-04",
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "API endpoint exposure",
@@ -53,9 +58,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Active subdomains",
@@ -73,9 +81,12 @@
         ],
         "cis-v8": [
           "CIS-01"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Admin panel exposure",
@@ -96,9 +107,12 @@
           "CIS-05",
           "CIS-06",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CA diversity",
@@ -116,9 +130,12 @@
         ],
         "cis-v8": [
           "CIS-15"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CAA record",
@@ -136,9 +153,12 @@
         ],
         "cis-v8": [
           "CIS-12"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "COOP enforcement level",
@@ -149,9 +169,12 @@
         ],
         "iso27001": [
           "ISO27001 A.8.26"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 2
+      "framework_count": 3
     },
     {
       "check": "CORS credential reflection",
@@ -170,9 +193,12 @@
         "cis-v8": [
           "CIS-06",
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CORS policy",
@@ -189,9 +215,12 @@
         "cis-v8": [
           "CIS-06",
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CSP",
@@ -208,9 +237,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CSP base-uri",
@@ -226,9 +258,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CSP depth",
@@ -244,9 +279,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CSP object-src",
@@ -262,9 +300,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CSP quality",
@@ -281,9 +322,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CSP reporting",
@@ -299,9 +343,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CT log query",
@@ -319,9 +366,12 @@
         ],
         "cis-v8": [
           "CIS-01"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "CT log subdomain enumeration",
@@ -339,9 +389,12 @@
         ],
         "cis-v8": [
           "CIS-01"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Cache-Control",
@@ -357,9 +410,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Certificate Transparency",
@@ -384,9 +440,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Certificate chain completeness",
@@ -399,9 +458,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Certificate expiry",
@@ -414,9 +476,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Certificate issuer",
@@ -429,9 +494,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Certificate key size",
@@ -444,9 +512,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Certificate validity",
@@ -459,9 +530,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Cipher suite",
@@ -477,9 +551,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Clear-Site-Data on logout",
@@ -497,9 +574,12 @@
         ],
         "cis-v8": [
           "CIS-05"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Clickjacking protection",
@@ -515,9 +595,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Common subdomain enumeration",
@@ -535,9 +618,12 @@
         ],
         "cis-v8": [
           "CIS-01"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Connection",
@@ -569,9 +655,12 @@
         ],
         "cis-v8": [
           "CIS-05"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Cookie security",
@@ -589,9 +678,12 @@
         ],
         "cis-v8": [
           "CIS-05"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Cross-Origin-Embedder-Policy",
@@ -607,9 +699,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Cross-Origin-Opener-Policy",
@@ -625,9 +720,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Cross-Origin-Resource-Policy",
@@ -643,9 +741,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Cross-origin isolation",
@@ -661,9 +762,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "DKIM records",
@@ -681,9 +785,12 @@
         ],
         "cis-v8": [
           "CIS-09"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AT"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "DMARC record",
@@ -701,9 +808,12 @@
         ],
         "cis-v8": [
           "CIS-09"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AT"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "DNS zone transfer",
@@ -721,9 +831,13 @@
         "cis-v8": [
           "CIS-01",
           "CIS-12"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM",
+          "NIST.PR.IR"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "DNSSEC",
@@ -739,9 +853,12 @@
         ],
         "cis-v8": [
           "CIS-12"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.IR"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Dangerous HTTP methods",
@@ -759,9 +876,12 @@
         "cis-v8": [
           "CIS-16",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Deprecated Expect-CT header",
@@ -778,9 +898,12 @@
         ],
         "cis-v8": [
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Deprecated HPKP header",
@@ -798,9 +921,12 @@
         ],
         "cis-v8": [
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Deprecated HPKP-RO header",
@@ -817,9 +943,12 @@
         ],
         "cis-v8": [
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Deprecated security headers",
@@ -837,9 +966,12 @@
         "cis-v8": [
           "CIS-04",
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Directory listing",
@@ -857,9 +989,12 @@
         "cis-v8": [
           "CIS-16",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Error page information leakage",
@@ -875,9 +1010,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Exposed .git directory",
@@ -897,9 +1035,12 @@
         "cis-v8": [
           "CIS-07",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.AE"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "HSTS",
@@ -917,9 +1058,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "HSTS preload list",
@@ -937,9 +1081,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "HSTS strength",
@@ -957,9 +1104,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "HTTP methods",
@@ -976,9 +1126,12 @@
         "cis-v8": [
           "CIS-16",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "HTTP to HTTPS redirect",
@@ -995,9 +1148,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "HTTP/2 support",
@@ -1010,9 +1166,12 @@
         ],
         "bsi": [
           "BSI APP.3.2"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.IR"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "HTTPS response",
@@ -1025,9 +1184,12 @@
         ],
         "bsi": [
           "BSI APP.3.2"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.IR"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Host header injection",
@@ -1044,9 +1206,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Insecure form action",
@@ -1064,9 +1229,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "JS library vulnerability summary",
@@ -1086,9 +1254,12 @@
         "cis-v8": [
           "CIS-07",
           "CIS-15"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.AE"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "JavaScript libraries detected",
@@ -1105,9 +1276,12 @@
         "cis-v8": [
           "CIS-02",
           "CIS-15"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "JavaScript library scan",
@@ -1127,9 +1301,12 @@
         "cis-v8": [
           "CIS-02",
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.AE"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Legacy X-XSS-Protection header",
@@ -1146,9 +1323,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "MIME sniffing protection",
@@ -1164,9 +1344,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "MX records",
@@ -1184,9 +1367,13 @@
         "cis-v8": [
           "CIS-01",
           "CIS-09"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM",
+          "NIST.PR.AT"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Mixed content",
@@ -1202,9 +1389,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Nameservers",
@@ -1221,9 +1411,13 @@
         "cis-v8": [
           "CIS-01",
           "CIS-12"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM",
+          "NIST.PR.IR"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "OCSP stapling",
@@ -1236,9 +1430,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Open redirect",
@@ -1255,9 +1452,12 @@
         "cis-v8": [
           "CIS-16",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Permissions policy",
@@ -1273,9 +1473,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Permissions-Policy depth",
@@ -1291,9 +1494,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Rate limiting",
@@ -1312,9 +1518,13 @@
         "cis-v8": [
           "CIS-06",
           "CIS-13"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.CM",
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Recent certificate issuance",
@@ -1329,9 +1539,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Referrer policy",
@@ -1347,9 +1560,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Referrer policy strength",
@@ -1365,9 +1581,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Reflected XSS",
@@ -1384,9 +1603,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Robots.txt sensitive paths",
@@ -1399,9 +1621,12 @@
         ],
         "bsi": [
           "BSI APP.3.2"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "SPF record",
@@ -1419,9 +1644,12 @@
         ],
         "cis-v8": [
           "CIS-09"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AT"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "SQL injection error disclosure",
@@ -1437,9 +1665,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "SQL injection patterns",
@@ -1456,9 +1687,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Sensitive file exposure",
@@ -1478,9 +1712,12 @@
         "cis-v8": [
           "CIS-07",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.AE"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Server header",
@@ -1497,9 +1734,13 @@
         "cis-v8": [
           "CIS-02",
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM",
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Signature algorithm",
@@ -1512,9 +1753,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "Source map exposure",
@@ -1533,9 +1777,13 @@
         "cis-v8": [
           "CIS-07",
           "CIS-18"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.AE",
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Stale subdomain detection",
@@ -1555,9 +1803,13 @@
         "cis-v8": [
           "CIS-01",
           "CIS-13"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.CM",
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Strong cipher suites",
@@ -1573,9 +1825,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Subdomain security posture",
@@ -1594,9 +1849,12 @@
         "cis-v8": [
           "CIS-01",
           "CIS-12"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Subresource Integrity (SRI)",
@@ -1613,9 +1871,12 @@
         "cis-v8": [
           "CIS-15",
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "TLS 1.0 Supported",
@@ -1632,9 +1893,12 @@
         ],
         "cis-v8": [
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "TLS 1.1 Supported",
@@ -1651,9 +1915,12 @@
         ],
         "cis-v8": [
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "TLS 1.3 support",
@@ -1669,9 +1936,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "TLS SAN extraction",
@@ -1684,9 +1954,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "TLS session resumption",
@@ -1699,9 +1972,12 @@
         ],
         "bsi": [
           "BSI CON.1"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 3
+      "framework_count": 4
     },
     {
       "check": "TLS version",
@@ -1719,9 +1995,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Technology fingerprint",
@@ -1737,9 +2016,12 @@
         ],
         "cis-v8": [
           "CIS-02"
+        ],
+        "nist-csf-v2": [
+          "NIST.ID.AM"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "WAF/CDN detection",
@@ -1757,9 +2039,13 @@
         ],
         "cis-v8": [
           "CIS-13"
+        ],
+        "nist-csf-v2": [
+          "NIST.DE.CM",
+          "NIST.PR.IR"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Weak TLS versions",
@@ -1777,9 +2063,12 @@
         "cis-v8": [
           "CIS-03",
           "CIS-07"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Weak cipher suites",
@@ -1795,9 +2084,12 @@
         ],
         "cis-v8": [
           "CIS-03"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.DS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "Well-known change password URL",
@@ -1813,9 +2105,12 @@
         ],
         "cis-v8": [
           "CIS-05"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.AA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "X-Download-Options",
@@ -1831,9 +2126,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "X-Frame-Options quality",
@@ -1849,9 +2147,12 @@
         ],
         "cis-v8": [
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "X-Powered-By header",
@@ -1868,9 +2169,12 @@
         "cis-v8": [
           "CIS-02",
           "CIS-04"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "XSS reflection",
@@ -1886,9 +2190,12 @@
         ],
         "cis-v8": [
           "CIS-16"
+        ],
+        "nist-csf-v2": [
+          "NIST.PR.PS"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     },
     {
       "check": "robots.txt",
@@ -1919,9 +2226,12 @@
         ],
         "cis-v8": [
           "CIS-17"
+        ],
+        "nist-csf-v2": [
+          "NIST.RS.MA"
         ]
       },
-      "framework_count": 4
+      "framework_count": 5
     }
   ]
 }

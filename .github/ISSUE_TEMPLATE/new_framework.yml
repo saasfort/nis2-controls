@@ -1,0 +1,47 @@
+name: New framework request
+description: Propose adding a new compliance framework mapping (e.g. SOC 2, PCI DSS, HIPAA, DORA).
+title: "[new-framework] "
+labels: ["new-framework", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New frameworks are welcome if they meet two criteria:
+        1. **At least one externally-observable subcategory** — pure governance / training / paper-only frameworks aren't a fit.
+        2. **Public, citable source document** — paywalled or members-only standards make community review impossible.
+  - type: input
+    id: framework_name
+    attributes:
+      label: Framework name + version
+      placeholder: "SOC 2 Trust Services Criteria 2017 (revised 2022)"
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Authoritative public source URL
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: slug_proposal
+    attributes:
+      label: Proposed slug
+      description: lowercase, kebab-case, used as the filename and crosswalk key
+      placeholder: "soc2-tsc"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Which subcategories are externally observable?
+      description: Be honest — list only what a public scanner can actually verify. Auditors read these mappings critically.
+    validations:
+      required: true
+  - type: checkboxes
+    id: licensing
+    attributes:
+      label: Licensing
+      options:
+        - label: I confirm the framework text is publicly accessible and that mapping it does not infringe a paywalled standard's terms.
+          required: true

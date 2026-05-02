@@ -6,6 +6,37 @@ project follows semantic versioning.
 
 ## [Unreleased]
 
+## [0.4.0] — 2026-05-02
+
+### Added
+- `data/nist-csf-v2-mapping.json` + `.yaml` — NIST Cybersecurity Framework v2.0
+  (released Feb 2024). 9 subcategories across the 6 v2 functions
+  (Identify / Protect / Detect / Respond) with externally-observable signals.
+  Skips Govern (GV.*), Recover (RC.*) and pure governance subcategories — no
+  external scanner can verify them.
+- `examples/go/lookup.go` — zero-dependency Go CLI lookup tool, completes the
+  language trio (Python + JS + Go). Standard library only, supports `-remote`.
+- `.github/ISSUE_TEMPLATE/mapping_correction.yml` — structured intake for
+  check↔control changes; requires citation.
+- `.github/ISSUE_TEMPLATE/new_framework.yml` — gates new-framework requests
+  on (a) at least one externally-observable subcategory, (b) public source.
+- `.github/PULL_REQUEST_TEMPLATE.md` — reviewer checklist incl. crosswalk
+  regeneration + YAML/JSON parity.
+- README updated: 5-framework coverage row + NIST CSF v2 sample lookup output.
+
+### Changed
+- `data/check-crosswalk.{json,yaml}` regenerated to include `nist-csf-v2`.
+  103 unique checks: 85 covered in all 5 frameworks (vs. 85/4 last release),
+  14 in 4 frameworks, 3 in 3, 1 in 2, 0 in 1.
+- All language helpers (Python / JS / Go) updated to surface `nist-csf-v2` in
+  default output and as a `--framework` choice.
+
+### Repository
+- 5 framework files + 1 crosswalk + HANDBOOK + 3 example languages +
+  issue/PR templates. Total artefacts: 16.
+
+## [0.3.0] — 2026-05-02
+
 ### Added
 - `data/check-crosswalk.json` + `.yaml` — inverted index per check name to every
   control across all four frameworks. 103 unique checks; 85 covered in all four
