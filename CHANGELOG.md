@@ -6,6 +6,34 @@ project follows semantic versioning.
 
 ## [Unreleased]
 
+## [0.5.0] — 2026-05-02
+
+### Added
+- `data/dora-mapping.json` + `.yaml` — Digital Operational Resilience Act
+  (Regulation (EU) 2022/2554), mandatory for EU financial entities since
+  17 January 2026. Covers 7 articles with externally-observable ICT-risk
+  management requirements: Art. 7 (ICT systems/protocols/tools), Art. 8
+  (asset identification), Art. 9 (protection/prevention/encryption),
+  Art. 10 (detection), Art. 13 (vulnerability awareness), Art. 17 (incident
+  management contact / disclosure), Art. 28 (third-party JS supply chain).
+  Skips Art. 5–6 (governance), 11–16 (response/recovery/learning),
+  18–23 (incident reporting/testing), 29–44 (contractual third-party risk)
+  — auditors verify those from documentation, not external scans.
+
+### Changed
+- `data/check-crosswalk.{json,yaml}` regenerated to include `dora`.
+  103 unique checks: 69 covered in all 6 frameworks (vs. 85/5 last release —
+  drop reflects DORA's narrower externally-observable scope), 29 in 5,
+  1 in 4, 3 in 3, 1 in 2, 0 in 1.
+- All language helpers (Python / JS / Go) updated to surface `dora` in
+  default output and as a `--framework` choice.
+- README expanded: 6-framework coverage row + DORA in language sample
+  output.
+
+### Repository
+- 6 framework files + 1 crosswalk + HANDBOOK + 3 example languages +
+  issue/PR templates + lint workflow. Total artefacts: 17.
+
 ## [0.4.0] — 2026-05-02
 
 ### Added

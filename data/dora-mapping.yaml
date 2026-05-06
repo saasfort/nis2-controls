@@ -1,0 +1,169 @@
+$schema: https://saasfort.com/schemas/nis2-control-library-v1.json
+title: SaaSFort DORA (Digital Operational Resilience Act) Mapping
+source: Regulation (EU) 2022/2554 (DORA) — externally-observable ICT-risk-management requirements only
+generated_at: '2026-05-02T00:00:00Z'
+license: MIT
+repository: https://github.com/welcome-archon/nis2-controls
+scope_note: 'DORA covers 5 pillars: ICT risk management (Art. 5-15), incident reporting (Art. 17-23), digital operational resilience testing (Art. 24-27), third-party risk (Art. 28-44), and information
+  sharing (Art. 45). The bulk of DORA is process and contractual — much of it cannot be verified externally. This file maps only the articles whose technical requirements have an externally-observable signal:
+  Art. 7 (ICT systems/protocols/tools), Art. 8 (asset identification), Art. 9 (protection/prevention/encryption), Art. 10 (detection), Art. 28 (third-party JS supply chain). Articles 5-6 (governance), 11-16
+  (response/recovery/learning), 17-23 (incident reporting), 24-27 (testing programs), 29-44 (contractual third-party risk) are intentionally absent — auditors verify those from documentation, not external
+  scans. Mandatory for EU financial entities (banks, insurance, investment firms, payment institutions, crypto-asset service providers) since 17 January 2026.'
+controls:
+- control: DORA Art. 7
+  title: ICT systems, protocols and tools
+  category: ICT risk management
+  checks:
+  - API Content-Type security
+  - Cache-Control
+  - Clickjacking protection
+  - Deprecated security headers
+  - Error page information leakage
+  - HSTS
+  - HSTS preload list
+  - HSTS strength
+  - HTTP to HTTPS redirect
+  - HTTP/2 support
+  - HTTPS response
+  - Legacy X-XSS-Protection header
+  - MIME sniffing protection
+  - Permissions policy
+  - Referrer policy
+  - Robots.txt sensitive paths
+  - Server header
+  - Technology fingerprint
+  - X-Frame-Options quality
+  - X-Powered-By header
+  evidence_types:
+  - ICT-systems inventory and architecture diagrams (Art. 7(2)(a))
+  - Approved-tools list with reliability/scalability evidence (Art. 7(2)(b))
+  - Update / patch SLA evidence
+  - Vendor reliability assessments
+- control: DORA Art. 8
+  title: Identification of ICT-supported business functions and ICT assets
+  category: ICT risk management
+  checks:
+  - Active subdomains
+  - CT log query
+  - CT log subdomain enumeration
+  - Common subdomain enumeration
+  - DNS zone transfer
+  - MX records
+  - Nameservers
+  - Stale subdomain detection
+  - Subdomain security posture
+  - JavaScript libraries detected
+  - Server header
+  - Technology fingerprint
+  evidence_types:
+  - Documented inventory of all ICT business functions (Art. 8(1))
+  - Mapping of information assets supporting those functions (Art. 8(1))
+  - Continuous identification of sources of ICT risk (Art. 8(2))
+  - Reconciliation log against authoritative CMDB
+- control: DORA Art. 9
+  title: Protection and prevention
+  category: ICT risk management
+  checks:
+  - CA diversity
+  - CAA record
+  - Certificate chain (self-signed)
+  - Certificate chain completeness
+  - Certificate expiry
+  - Certificate issuer
+  - Certificate key size
+  - Certificate validity
+  - Cipher suite
+  - CORS credential reflection
+  - CORS policy
+  - Cookie prefix security
+  - Cookie security
+  - CSP
+  - CSP base-uri
+  - CSP depth
+  - CSP object-src
+  - CSP quality
+  - CSP reporting
+  - Cross-Origin-Embedder-Policy
+  - Cross-Origin-Opener-Policy
+  - Cross-Origin-Resource-Policy
+  - Cross-origin isolation
+  - DKIM records
+  - DMARC record
+  - DNSSEC
+  - Dangerous HTTP methods
+  - Mixed content
+  - OCSP stapling
+  - SPF record
+  - Signature algorithm
+  - Strong cipher suites
+  - TLS 1.3 support
+  - TLS SAN extraction
+  - TLS session resumption
+  - TLS version
+  - Weak TLS versions
+  - Weak cipher suites
+  evidence_types:
+  - Encryption-in-transit and at-rest policies (Art. 9(2)(c))
+  - Cipher allow-list and key-management procedures
+  - Network segmentation map (Art. 9(2)(d))
+  - Logical and physical access control register (Art. 9(2)(b))
+  - Identity and access management procedures
+- control: DORA Art. 10
+  title: Detection
+  category: ICT risk management
+  checks:
+  - Rate limiting
+  - Stale subdomain detection
+  - WAF/CDN detection
+  - JS library vulnerability summary
+  - JavaScript library scan
+  evidence_types:
+  - Anomaly detection mechanisms (Art. 10(1))
+  - Multiple layers of control + alert thresholds (Art. 10(2))
+  - Allocation of resources / capabilities to monitor user activity (Art. 10(3))
+  - SIEM rule catalogue and tuning log
+- control: DORA Art. 13
+  title: Learning and evolving — vulnerability awareness
+  category: ICT risk management
+  checks:
+  - Deprecated Expect-CT header
+  - Deprecated HPKP header
+  - Deprecated HPKP-RO header
+  - Deprecated security headers
+  - Exposed .git directory
+  - JS library vulnerability summary
+  - JavaScript library scan
+  - Sensitive file exposure
+  - Source map exposure
+  - TLS 1.0 Supported
+  - TLS 1.1 Supported
+  - Weak TLS versions
+  evidence_types:
+  - Continuous vulnerability monitoring (Art. 13(1)(c))
+  - Threat-intel ingestion records
+  - Lessons-learned register from past incidents (Art. 13(2))
+  - Patch SLA dashboard exports
+- control: DORA Art. 28
+  title: Third-party ICT risk — supply chain controls
+  category: Third-party risk management
+  checks:
+  - CA diversity
+  - JS library vulnerability summary
+  - JavaScript libraries detected
+  - JavaScript library scan
+  - Subresource Integrity (SRI)
+  evidence_types:
+  - Register of contractual arrangements with third-party ICT providers (Art. 28(3))
+  - Concentration-risk assessment (Art. 28(7))
+  - Critical-third-party-provider designations (Art. 31)
+  - Subprocessor list and DPAs
+- control: DORA Art. 17
+  title: ICT-related incident management — disclosure & contact
+  category: Incident management
+  checks:
+  - security.txt (RFC 9116)
+  evidence_types:
+  - Incident response policy (Art. 17(1))
+  - Roles and responsibilities matrix (Art. 17(2))
+  - Communication plan with major ICT-related incident triage thresholds (Art. 17(3))
+  - Disclosure / vulnerability handling policy

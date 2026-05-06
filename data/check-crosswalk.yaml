@@ -1,23 +1,25 @@
 $schema: https://saasfort.com/schemas/nis2-control-library-v1.json
 title: SaaSFort Cross-Framework Check Crosswalk
-description: 'Inverted index: per check, lists every control across NIS2 Art.21, ISO 27001:2022 Annex A, BSI IT-Grundschutz Bausteine, CIS Controls v8, and NIST CSF v2 that references it. Use this for one-lookup
-  multi-framework labelling of scan findings.'
-generated_at: '2026-05-02T01:12:44Z'
+description: 'Inverted index: per check, lists every control across NIS2 Art.21, ISO 27001:2022 Annex A, BSI IT-Grundschutz Bausteine, CIS Controls v8, NIST CSF v2, and DORA that references it. Use this
+  for one-lookup multi-framework labelling of scan findings.'
+generated_at: '2026-05-06T21:09:00Z'
 license: MIT
 repository: https://github.com/welcome-archon/nis2-controls
 stats:
   total_unique_checks: 103
-  covered_in_all_5_frameworks: 85
-  covered_in_4_frameworks: 14
-  covered_in_3_frameworks: 3
+  covered_in_all_6_frameworks: 69
+  covered_in_1_frameworks: 0
   covered_in_2_frameworks: 1
-  covered_in_1_framework: 0
+  covered_in_3_frameworks: 3
+  covered_in_4_frameworks: 1
+  covered_in_5_frameworks: 29
 frameworks:
 - nis2
 - iso27001
 - bsi
 - cis-v8
 - nist-csf-v2
+- dora
 checks:
 - check: API Content-Type security
   controls:
@@ -32,7 +34,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: API endpoint exposure
   controls:
     nis2:
@@ -61,7 +65,9 @@ checks:
     - CIS-01
     nist-csf-v2:
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: Admin panel exposure
   controls:
     nis2:
@@ -94,7 +100,10 @@ checks:
     - CIS-15
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 28
+    - DORA Art. 9
+  framework_count: 6
 - check: CAA record
   controls:
     nis2:
@@ -109,7 +118,9 @@ checks:
     - CIS-12
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: COOP enforcement level
   controls:
     nis2:
@@ -135,7 +146,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.AA
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CORS policy
   controls:
     nis2:
@@ -149,7 +162,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.AA
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CSP
   controls:
     nis2:
@@ -163,7 +178,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CSP base-uri
   controls:
     nis2:
@@ -176,7 +193,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CSP depth
   controls:
     nis2:
@@ -189,7 +208,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CSP object-src
   controls:
     nis2:
@@ -202,7 +223,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CSP quality
   controls:
     nis2:
@@ -216,7 +239,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CSP reporting
   controls:
     nis2:
@@ -229,7 +254,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: CT log query
   controls:
     nis2:
@@ -244,7 +271,9 @@ checks:
     - CIS-01
     nist-csf-v2:
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: CT log subdomain enumeration
   controls:
     nis2:
@@ -259,7 +288,9 @@ checks:
     - CIS-01
     nist-csf-v2:
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: Cache-Control
   controls:
     nis2:
@@ -272,7 +303,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: Certificate Transparency
   controls:
     nis2:
@@ -290,7 +323,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Certificate chain completeness
   controls:
     nis2:
@@ -301,7 +336,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Certificate expiry
   controls:
     nis2:
@@ -312,7 +349,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Certificate issuer
   controls:
     nis2:
@@ -323,7 +362,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Certificate key size
   controls:
     nis2:
@@ -334,7 +375,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Certificate validity
   controls:
     nis2:
@@ -345,7 +388,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Cipher suite
   controls:
     nis2:
@@ -358,7 +403,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Clear-Site-Data on logout
   controls:
     nis2:
@@ -386,7 +433,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: Common subdomain enumeration
   controls:
     nis2:
@@ -401,7 +450,9 @@ checks:
     - CIS-01
     nist-csf-v2:
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: Connection
   controls:
     nis2:
@@ -424,7 +475,9 @@ checks:
     - CIS-05
     nist-csf-v2:
     - NIST.PR.AA
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Cookie security
   controls:
     nis2:
@@ -439,7 +492,9 @@ checks:
     - CIS-05
     nist-csf-v2:
     - NIST.PR.AA
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Cross-Origin-Embedder-Policy
   controls:
     nis2:
@@ -452,7 +507,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Cross-Origin-Opener-Policy
   controls:
     nis2:
@@ -465,7 +522,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Cross-Origin-Resource-Policy
   controls:
     nis2:
@@ -478,7 +537,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Cross-origin isolation
   controls:
     nis2:
@@ -491,7 +552,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: DKIM records
   controls:
     nis2:
@@ -506,7 +569,9 @@ checks:
     - CIS-09
     nist-csf-v2:
     - NIST.PR.AT
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: DMARC record
   controls:
     nis2:
@@ -521,7 +586,9 @@ checks:
     - CIS-09
     nist-csf-v2:
     - NIST.PR.AT
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: DNS zone transfer
   controls:
     nis2:
@@ -537,7 +604,9 @@ checks:
     nist-csf-v2:
     - NIST.ID.AM
     - NIST.PR.IR
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: DNSSEC
   controls:
     nis2:
@@ -550,7 +619,9 @@ checks:
     - CIS-12
     nist-csf-v2:
     - NIST.PR.IR
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Dangerous HTTP methods
   controls:
     nis2:
@@ -565,7 +636,9 @@ checks:
     - CIS-18
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Deprecated Expect-CT header
   controls:
     nis2:
@@ -579,7 +652,9 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: Deprecated HPKP header
   controls:
     nis2:
@@ -594,7 +669,9 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: Deprecated HPKP-RO header
   controls:
     nis2:
@@ -608,7 +685,9 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: Deprecated security headers
   controls:
     nis2:
@@ -623,7 +702,10 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+    - DORA Art. 7
+  framework_count: 6
 - check: Directory listing
   controls:
     nis2:
@@ -651,7 +733,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: Exposed .git directory
   controls:
     nis2:
@@ -668,7 +752,9 @@ checks:
     - CIS-18
     nist-csf-v2:
     - NIST.DE.AE
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: HSTS
   controls:
     nis2:
@@ -683,7 +769,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: HSTS preload list
   controls:
     nis2:
@@ -698,7 +786,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: HSTS strength
   controls:
     nis2:
@@ -713,7 +803,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: HTTP methods
   controls:
     nis2:
@@ -741,7 +833,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: HTTP/2 support
   controls:
     nis2:
@@ -752,7 +846,9 @@ checks:
     - BSI APP.3.2
     nist-csf-v2:
     - NIST.PR.IR
-  framework_count: 4
+    dora:
+    - DORA Art. 7
+  framework_count: 5
 - check: HTTPS response
   controls:
     nis2:
@@ -763,7 +859,9 @@ checks:
     - BSI APP.3.2
     nist-csf-v2:
     - NIST.PR.IR
-  framework_count: 4
+    dora:
+    - DORA Art. 7
+  framework_count: 5
 - check: Host header injection
   controls:
     nis2:
@@ -809,7 +907,11 @@ checks:
     - CIS-15
     nist-csf-v2:
     - NIST.DE.AE
-  framework_count: 5
+    dora:
+    - DORA Art. 10
+    - DORA Art. 13
+    - DORA Art. 28
+  framework_count: 6
 - check: JavaScript libraries detected
   controls:
     nis2:
@@ -823,7 +925,10 @@ checks:
     - CIS-15
     nist-csf-v2:
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 28
+    - DORA Art. 8
+  framework_count: 6
 - check: JavaScript library scan
   controls:
     nis2:
@@ -840,7 +945,11 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.DE.AE
-  framework_count: 5
+    dora:
+    - DORA Art. 10
+    - DORA Art. 13
+    - DORA Art. 28
+  framework_count: 6
 - check: Legacy X-XSS-Protection header
   controls:
     nis2:
@@ -854,7 +963,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: MIME sniffing protection
   controls:
     nis2:
@@ -867,7 +978,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: MX records
   controls:
     nis2:
@@ -883,7 +996,9 @@ checks:
     nist-csf-v2:
     - NIST.ID.AM
     - NIST.PR.AT
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: Mixed content
   controls:
     nis2:
@@ -896,7 +1011,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Nameservers
   controls:
     nis2:
@@ -911,7 +1028,9 @@ checks:
     nist-csf-v2:
     - NIST.ID.AM
     - NIST.PR.IR
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: OCSP stapling
   controls:
     nis2:
@@ -922,7 +1041,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Open redirect
   controls:
     nis2:
@@ -949,7 +1070,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: Permissions-Policy depth
   controls:
     nis2:
@@ -979,7 +1102,9 @@ checks:
     nist-csf-v2:
     - NIST.DE.CM
     - NIST.PR.AA
-  framework_count: 5
+    dora:
+    - DORA Art. 10
+  framework_count: 6
 - check: Recent certificate issuance
   controls:
     nis2:
@@ -1005,7 +1130,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: Referrer policy strength
   controls:
     nis2:
@@ -1043,7 +1170,9 @@ checks:
     - BSI APP.3.2
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 4
+    dora:
+    - DORA Art. 7
+  framework_count: 5
 - check: SPF record
   controls:
     nis2:
@@ -1058,7 +1187,9 @@ checks:
     - CIS-09
     nist-csf-v2:
     - NIST.PR.AT
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: SQL injection error disclosure
   controls:
     nis2:
@@ -1102,7 +1233,9 @@ checks:
     - CIS-18
     nist-csf-v2:
     - NIST.DE.AE
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: Server header
   controls:
     nis2:
@@ -1117,7 +1250,10 @@ checks:
     nist-csf-v2:
     - NIST.ID.AM
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+    - DORA Art. 8
+  framework_count: 6
 - check: Signature algorithm
   controls:
     nis2:
@@ -1128,7 +1264,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: Source map exposure
   controls:
     nis2:
@@ -1145,7 +1283,9 @@ checks:
     nist-csf-v2:
     - NIST.DE.AE
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: Stale subdomain detection
   controls:
     nis2:
@@ -1163,7 +1303,10 @@ checks:
     nist-csf-v2:
     - NIST.DE.CM
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 10
+    - DORA Art. 8
+  framework_count: 6
 - check: Strong cipher suites
   controls:
     nis2:
@@ -1176,7 +1319,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Subdomain security posture
   controls:
     nis2:
@@ -1192,7 +1337,9 @@ checks:
     - CIS-12
     nist-csf-v2:
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 8
+  framework_count: 6
 - check: Subresource Integrity (SRI)
   controls:
     nis2:
@@ -1206,7 +1353,9 @@ checks:
     - CIS-16
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 28
+  framework_count: 6
 - check: TLS 1.0 Supported
   controls:
     nis2:
@@ -1220,7 +1369,9 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: TLS 1.1 Supported
   controls:
     nis2:
@@ -1234,7 +1385,9 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+  framework_count: 6
 - check: TLS 1.3 support
   controls:
     nis2:
@@ -1247,7 +1400,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: TLS SAN extraction
   controls:
     nis2:
@@ -1258,7 +1413,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: TLS session resumption
   controls:
     nis2:
@@ -1269,7 +1426,9 @@ checks:
     - BSI CON.1
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 4
+    dora:
+    - DORA Art. 9
+  framework_count: 5
 - check: TLS version
   controls:
     nis2:
@@ -1284,7 +1443,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Technology fingerprint
   controls:
     nis2:
@@ -1297,7 +1458,10 @@ checks:
     - CIS-02
     nist-csf-v2:
     - NIST.ID.AM
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+    - DORA Art. 8
+  framework_count: 6
 - check: WAF/CDN detection
   controls:
     nis2:
@@ -1313,7 +1477,9 @@ checks:
     nist-csf-v2:
     - NIST.DE.CM
     - NIST.PR.IR
-  framework_count: 5
+    dora:
+    - DORA Art. 10
+  framework_count: 6
 - check: Weak TLS versions
   controls:
     nis2:
@@ -1328,7 +1494,10 @@ checks:
     - CIS-07
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 13
+    - DORA Art. 9
+  framework_count: 6
 - check: Weak cipher suites
   controls:
     nis2:
@@ -1341,7 +1510,9 @@ checks:
     - CIS-03
     nist-csf-v2:
     - NIST.PR.DS
-  framework_count: 5
+    dora:
+    - DORA Art. 9
+  framework_count: 6
 - check: Well-known change password URL
   controls:
     nis2:
@@ -1380,7 +1551,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: X-Powered-By header
   controls:
     nis2:
@@ -1394,7 +1567,9 @@ checks:
     - CIS-04
     nist-csf-v2:
     - NIST.PR.PS
-  framework_count: 5
+    dora:
+    - DORA Art. 7
+  framework_count: 6
 - check: XSS reflection
   controls:
     nis2:
@@ -1429,4 +1604,6 @@ checks:
     - CIS-17
     nist-csf-v2:
     - NIST.RS.MA
-  framework_count: 5
+    dora:
+    - DORA Art. 17
+  framework_count: 6
