@@ -1,0 +1,215 @@
+{
+  "$schema": "https://saasfort.com/schemas/nis2-control-library-v1.json",
+  "title": "SaaSFort OWASP ASVS v4.0.3 Mapping",
+  "source": "OWASP Application Security Verification Standard v4.0.3 (Oct 2021) — externally-observable Level 1 + Level 2 requirements only",
+  "generated_at": "2026-05-02T00:00:00Z",
+  "license": "MIT",
+  "repository": "https://github.com/welcome-archon/nis2-controls",
+  "scope_note": "ASVS v4.0.3 has 14 chapters and 286 requirements across Levels 1/2/3. Most requirements need authenticated access, code review, or threat modelling — only a minority can be verified externally without credentials. This file maps 9 chapters whose requirements have at least one externally-observable signal: V2 Authentication, V3 Session Management, V4 Access Control, V8 Data Protection, V9 Communications, V10 Malicious Code, V12 Files & Resources, V13 API & Web Services, V14 Configuration. Internal-only chapters (V1 Architecture, V5 Validation/Encoding/Sanitization, V6 Stored Cryptography, V7 Error Handling and Logging, V11 Business Logic) are intentionally absent — they require source-code review or runtime instrumentation. ASVS is published by OWASP under CC-BY-SA 4.0; this mapping is independent commentary and does not modify the standard text.",
+  "controls": [
+    {
+      "control": "ASVS V2 — Authentication",
+      "title": "Authentication Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "Cookie security",
+        "Cookie prefix security",
+        "Clear-Site-Data on logout",
+        "Well-known change password URL"
+      ],
+      "evidence_types": [
+        "Authentication architecture document (ASVS V2.1)",
+        "MFA enforcement evidence (ASVS V2.7)",
+        "Password policy + storage standard (ASVS V2.4, V2.6)",
+        "Credential recovery flow audit (ASVS V2.5)"
+      ]
+    },
+    {
+      "control": "ASVS V3 — Session Management",
+      "title": "Session Management Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "Cookie security",
+        "Cookie prefix security",
+        "Clear-Site-Data on logout"
+      ],
+      "evidence_types": [
+        "Session lifecycle diagram (ASVS V3.2 — token-based session)",
+        "Session timeout / re-auth policy (ASVS V3.3)",
+        "Cookie configuration baseline",
+        "Logout flow test report"
+      ]
+    },
+    {
+      "control": "ASVS V4 — Access Control",
+      "title": "Access Control Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "Admin panel exposure",
+        "CORS credential reflection",
+        "CORS policy",
+        "Rate limiting"
+      ],
+      "evidence_types": [
+        "Authorization model + role matrix (ASVS V4.1)",
+        "Tenant isolation tests (ASVS V4.3)",
+        "Privileged function audit log (ASVS V4.2)",
+        "Forced-browse test report"
+      ]
+    },
+    {
+      "control": "ASVS V8 — Data Protection",
+      "title": "Data Protection Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "Cache-Control",
+        "Cookie security",
+        "HSTS",
+        "Mixed content",
+        "Referrer policy"
+      ],
+      "evidence_types": [
+        "Data classification policy (ASVS V8.1)",
+        "Caching directives review (ASVS V8.2)",
+        "Sensitive-data inventory + storage standard (ASVS V8.3)"
+      ]
+    },
+    {
+      "control": "ASVS V9 — Communications",
+      "title": "Communications Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "CA diversity",
+        "CAA record",
+        "Certificate chain (self-signed)",
+        "Certificate chain completeness",
+        "Certificate expiry",
+        "Certificate issuer",
+        "Certificate key size",
+        "Certificate validity",
+        "Cipher suite",
+        "HSTS",
+        "HSTS preload list",
+        "HSTS strength",
+        "HTTP to HTTPS redirect",
+        "Insecure form action",
+        "Mixed content",
+        "OCSP stapling",
+        "Signature algorithm",
+        "Strong cipher suites",
+        "TLS 1.0 Supported",
+        "TLS 1.1 Supported",
+        "TLS 1.3 support",
+        "TLS SAN extraction",
+        "TLS session resumption",
+        "TLS version",
+        "Weak TLS versions",
+        "Weak cipher suites"
+      ],
+      "evidence_types": [
+        "TLS configuration baseline (ASVS V9.1)",
+        "Mutual-TLS coverage report (ASVS V9.2)",
+        "Cipher allow-list",
+        "Certificate inventory + lifecycle records"
+      ]
+    },
+    {
+      "control": "ASVS V10 — Malicious Code",
+      "title": "Malicious Code Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "JS library vulnerability summary",
+        "JavaScript libraries detected",
+        "JavaScript library scan",
+        "Subresource Integrity (SRI)",
+        "Source map exposure"
+      ],
+      "evidence_types": [
+        "Build pipeline integrity attestation (ASVS V10.1)",
+        "Software composition analysis (SCA) report (ASVS V10.3)",
+        "Allow-listed-CDN policy",
+        "SBOM"
+      ]
+    },
+    {
+      "control": "ASVS V12 — Files and Resources",
+      "title": "File and Resources Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "Directory listing",
+        "Exposed .git directory",
+        "Sensitive file exposure",
+        "Source map exposure",
+        "Robots.txt sensitive paths"
+      ],
+      "evidence_types": [
+        "File-upload allow-list policy (ASVS V12.1)",
+        "Static-asset hosting / CDN configuration (ASVS V12.5)",
+        "Pre-deploy secret-scan report",
+        "Web-root inventory"
+      ]
+    },
+    {
+      "control": "ASVS V13 — API and Web Service",
+      "title": "API and Web Service Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "API Content-Type security",
+        "API endpoint exposure",
+        "CORS credential reflection",
+        "CORS policy",
+        "Dangerous HTTP methods",
+        "HTTP methods",
+        "Rate limiting"
+      ],
+      "evidence_types": [
+        "API authentication standard (ASVS V13.1)",
+        "API rate-limit + abuse policy (ASVS V13.4)",
+        "OpenAPI / WSDL schema review",
+        "API gateway configuration"
+      ]
+    },
+    {
+      "control": "ASVS V14 — Configuration",
+      "title": "Configuration Verification Requirements",
+      "category": "ASVS",
+      "checks": [
+        "API Content-Type security",
+        "Clickjacking protection",
+        "COOP enforcement level",
+        "Cross-Origin-Embedder-Policy",
+        "Cross-Origin-Opener-Policy",
+        "Cross-Origin-Resource-Policy",
+        "Cross-origin isolation",
+        "CSP",
+        "CSP base-uri",
+        "CSP depth",
+        "CSP object-src",
+        "CSP quality",
+        "CSP reporting",
+        "Deprecated security headers",
+        "Deprecated Expect-CT header",
+        "Deprecated HPKP header",
+        "Deprecated HPKP-RO header",
+        "Error page information leakage",
+        "Legacy X-XSS-Protection header",
+        "MIME sniffing protection",
+        "Permissions policy",
+        "Permissions-Policy depth",
+        "Referrer policy",
+        "Referrer policy strength",
+        "Server header",
+        "Technology fingerprint",
+        "X-Download-Options",
+        "X-Frame-Options quality",
+        "X-Powered-By header"
+      ],
+      "evidence_types": [
+        "Security headers baseline (ASVS V14.4)",
+        "Hardening checklist per platform (ASVS V14.1)",
+        "Dependency-update SLA dashboard (ASVS V14.2)",
+        "Production-vs-pre-prod parity audit"
+      ]
+    }
+  ]
+}

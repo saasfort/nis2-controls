@@ -90,7 +90,7 @@ func lookupCheck(needle, framework string, remote bool) error {
 		}
 		matched++
 		fmt.Printf("\n%s  → %d frameworks\n", c.Check, c.FrameworkCount)
-		slugs := []string{"nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora"}
+		slugs := []string{"nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora", "owasp-asvs-v4"}
 		if framework != "" {
 			slugs = []string{framework}
 		}
@@ -133,7 +133,8 @@ func listControls(framework string, remote bool) error {
 		"bsi":         "bsi-it-grundschutz-mapping.json",
 		"cis-v8":      "cis-v8-mapping.json",
 		"nist-csf-v2": "nist-csf-v2-mapping.json",
-		"dora":        "dora-mapping.json",
+		"dora":          "dora-mapping.json",
+		"owasp-asvs-v4": "owasp-asvs-v4-mapping.json",
 	}
 	fname, ok := files[framework]
 	if !ok {

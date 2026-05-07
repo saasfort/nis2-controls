@@ -6,6 +6,35 @@ project follows semantic versioning.
 
 ## [Unreleased]
 
+## [0.6.0] — 2026-05-02
+
+### Added
+- `data/owasp-asvs-v4-mapping.json` + `.yaml` — OWASP Application Security
+  Verification Standard v4.0.3 (Oct 2021), 9 chapters with externally-observable
+  Level 1+2 requirements: V2 Authentication, V3 Session Management, V4 Access
+  Control, V8 Data Protection, V9 Communications, V10 Malicious Code, V12
+  Files & Resources, V13 API & Web Services, V14 Configuration. Skips V1
+  (architecture), V5 (input validation), V6 (stored crypto), V7 (error
+  handling/logging), V11 (business logic) — they require source review or
+  runtime instrumentation, not a public scanner. ASVS published by OWASP
+  under CC-BY-SA 4.0; this mapping is independent commentary.
+- ASVS is the technical-depth complement to the regulatory frameworks —
+  attracts security engineers as a complementary audience to auditors and
+  GRC teams.
+
+### Changed
+- `data/check-crosswalk.{json,yaml}` regenerated to include `owasp-asvs-v4`.
+  103 unique checks: 54 covered in all 7 frameworks (vs 69/6 last release —
+  drop reflects ASVS's narrower technical-only scope), 36 in 6, 8 in 5,
+  2 in 4, 2 in 3, 1 in 2, 0 in 1.
+- All language helpers (Python / JS / Go) updated to surface `owasp-asvs-v4`
+  in default output and as a `--framework` choice.
+- README expanded: 7-framework coverage row + ASVS in language sample output.
+
+### Repository
+- 7 framework files + 1 crosswalk + HANDBOOK + 3 example languages +
+  issue/PR templates + lint workflow. Total artefacts: 18.
+
 ## [0.5.0] — 2026-05-02
 
 ### Added

@@ -42,7 +42,7 @@ def cmd_lookup_check(check_name: str, framework: str | None, remote: bool):
     for c in matches:
         print(f"\n{c['check']}  → {c['framework_count']} frameworks")
         controls = c["controls"]
-        slugs = [framework] if framework else ["nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora"]
+        slugs = [framework] if framework else ["nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora", "owasp-asvs-v4"]
         for slug in slugs:
             ctrls = controls.get(slug, [])
             if ctrls:
@@ -63,6 +63,7 @@ def cmd_list_controls(framework: str, remote: bool):
         "cis-v8": "cis-v8-mapping.json",
         "nist-csf-v2": "nist-csf-v2-mapping.json",
         "dora": "dora-mapping.json",
+        "owasp-asvs-v4": "owasp-asvs-v4-mapping.json",
     }.get(framework)
     if not fname:
         print(f"Unknown framework: {framework}", file=sys.stderr)
@@ -75,7 +76,7 @@ def cmd_list_controls(framework: str, remote: bool):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("check", nargs="?", help="check name (case-insensitive substring match)")
-    ap.add_argument("--framework", choices=["nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora"],
+    ap.add_argument("--framework", choices=["nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora", "owasp-asvs-v4"],
                     help="filter / list mode by framework")
     ap.add_argument("--list-checks", action="store_true", help="print all unique check names")
     ap.add_argument("--list-controls", action="store_true",

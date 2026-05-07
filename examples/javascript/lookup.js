@@ -57,7 +57,7 @@ async function lookupCheck(checkName, framework, remote) {
     console.error(`No checks matching ${JSON.stringify(checkName)}.`);
     process.exit(2);
   }
-  const slugs = framework ? [framework] : ["nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora"];
+  const slugs = framework ? [framework] : ["nis2", "iso27001", "bsi", "cis-v8", "nist-csf-v2", "dora", "owasp-asvs-v4"];
   for (const c of matches) {
     console.log(`\n${c.check}  → ${c.framework_count} frameworks`);
     for (const s of slugs) {
@@ -80,6 +80,7 @@ async function listControls(framework, remote) {
     "cis-v8": "cis-v8-mapping.json",
     "nist-csf-v2": "nist-csf-v2-mapping.json",
     "dora": "dora-mapping.json",
+    "owasp-asvs-v4": "owasp-asvs-v4-mapping.json",
   }[framework];
   if (!fname) {
     console.error(`Unknown framework: ${framework}`);

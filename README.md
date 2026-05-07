@@ -16,6 +16,7 @@ We ship four mappings out of the box:
 - **CIS Controls v8.1** — 14 controls with IG1/IG2/IG3 implementation groups
 - **NIST Cybersecurity Framework v2.0** (Feb 2024) — 9 subcategories with externally-observable signals
 - **DORA** (Regulation (EU) 2022/2554, mandatory 17 Jan 2026) — 7 articles with externally-observable ICT-risk-management requirements (financial entities)
+- **OWASP ASVS v4.0.3** (Oct 2021) — 9 chapters with externally-observable Level 1+2 requirements (technical-depth complement to the regulatory frameworks)
 
 If you're building a security tool, GRC platform, audit checklist, or CI/CD security gate, you can use these mappings to label every finding with the regulatory control it satisfies — without redoing the legal research yourself.
 
@@ -45,7 +46,9 @@ data/
   nist-csf-v2-mapping.yaml
   dora-mapping.json                   # DORA (EU 2022/2554) → checks (financial entities)
   dora-mapping.yaml
-  check-crosswalk.json                # per-check inverted index across all 6 frameworks
+  owasp-asvs-v4-mapping.json          # OWASP ASVS v4.0.3 (technical-depth complement)
+  owasp-asvs-v4-mapping.yaml
+  check-crosswalk.json                # per-check inverted index across all 7 frameworks
   check-crosswalk.yaml
 examples/
   python/lookup.py                    # zero-dependency CLI lookup (Python 3.10+)
@@ -63,8 +66,9 @@ CHANGELOG.md                          # release notes
 - **14** CIS Controls v8 controls (IG1–IG3)
 - **9** NIST CSF v2.0 subcategories (ID, PR, DE, RS — externally observable only)
 - **7** DORA articles (Art. 7, 8, 9, 10, 13, 17, 28 — externally-observable ICT-risk-management subset)
+- **9** OWASP ASVS v4.0.3 chapters (V2, V3, V4, V8, V9, V10, V12, V13, V14 — externally-observable subset)
 - **103 unique technical checks** covering TLS, DNS, security headers, OWASP Top 10, certificate transparency, supply chain, and more
-- **69 of 103 checks** map to all six frameworks (true crosswalk coverage)
+- **54 of 103 checks** map to all seven frameworks (true crosswalk coverage)
 
 ## One-lookup multi-framework labelling
 
@@ -73,13 +77,14 @@ CHANGELOG.md                          # release notes
 ```bash
 $ python3 examples/python/lookup.py "HSTS"
 
-HSTS  → 6 frameworks
-  nis2       : NIS2 Art.21(2)(e), NIS2 Art.21(2)(h)
-  iso27001   : ISO27001 A.8.20, ISO27001 A.8.24
-  bsi        : BSI APP.3.2
-  cis-v8     : CIS-03
-  nist-csf-v2: NIST.PR.DS
-  dora       : DORA Art. 7
+HSTS  → 7 frameworks
+  nis2          : NIS2 Art.21(2)(e), NIS2 Art.21(2)(h)
+  iso27001      : ISO27001 A.8.20, ISO27001 A.8.24
+  bsi           : BSI APP.3.2
+  cis-v8        : CIS-03
+  nist-csf-v2   : NIST.PR.DS
+  dora          : DORA Art. 7
+  owasp-asvs-v4 : ASVS V8 — Data Protection, ASVS V9 — Communications
 ```
 
 The same lookup is available in Node (`examples/javascript/lookup.js`) and Go (`examples/go/lookup.go`) — all three produce identical output.
