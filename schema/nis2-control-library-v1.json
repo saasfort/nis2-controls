@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://welcome-archon.github.io/nis2-controls/schema/nis2-control-library-v1.json",
+  "title": "NIS2 Control Library — Framework Mapping File",
+  "description": "Schema for every framework-mapping JSON file under data/ (nis2-controls.json, iso27001-mapping.json, bsi-it-grundschutz-mapping.json, cis-v8-mapping.json, nist-csf-v2-mapping.json, dora-mapping.json, owasp-asvs-v4-mapping.json) AND for the derived crosswalk file (check-crosswalk.json — see oneOf below). Every PR that adds a new framework MUST validate against this schema (CI lint workflow enforces it).",
+  "type": "object",
+  "required": ["$schema", "title", "license", "repository"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this schema. New files SHOULD use the canonical published URL; legacy files reference the old saasfort.com placeholder.",
+      "examples": [
+        "https://welcome-archon.github.io/nis2-controls/schema/nis2-control-library-v1.json",
+        "https://saasfort.com/schemas/nis2-control-library-v1.json"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable name of the mapping (e.g. 'SaaSFort NIS2 Article 21 Control Library')."
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional one-paragraph description shown in tooling."
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Authoritative source the mapping is derived from (e.g. 'NIS2 Directive (EU) 2022/2555 Article 21')."
+    },
+    "scope_note": {
+      "type": "string",
+      "description": "Honest disclosure of WHICH parts of the framework this mapping covers and which it intentionally omits (e.g. 'governance subcategories absent — verified from documentation, not external scans'). Required for any partial mapping."
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "RFC3339 timestamp when the file was generated (informational; not enforced)."
+    },
+    "license": {
+      "type": "string",
+      "const": "MIT",
+      "description": "Mapping data is published under MIT. Not the framework text itself — that retains its original license."
+    },
+    "repository": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the canonical repo. Currently github.com/welcome-archon/nis2-controls."
+    },
+    "controls": {
+      "type": "array",
+      "description": "Per-control entries. Required for primary framework files; absent in the derived crosswalk file.",
+      "items": { "$ref": "#/$defs/control" }
+    },
+    "frameworks": {
+      "type": "array",
+      "description": "Crosswalk only — list of framework slugs covered.",
+      "items": { "type": "string" }
+    },
+    "checks": {
+      "type": "array",
+      "description": "Crosswalk only — per-check inverted index entries.",
+      "items": { "$ref": "#/$defs/crosswalkEntry" }
+    },
+    "stats": {
+      "type": "object",
+      "description": "Crosswalk only — coverage statistics.",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    }
+  },
+  "oneOf": [
+    {
+      "title": "Primary framework file",
+      "required": ["controls", "source"],
+      "not": { "required": ["checks"] }
+    },
+    {
+      "title": "Crosswalk file (derived view, no single source)",
+      "required": ["checks", "frameworks"],
+      "not": { "required": ["controls"] }
+    }
+  ],
+  "$defs": {
+    "control": {
+      "type": "object",
+      "required": ["control", "checks"],
+      "additionalProperties": false,
+      "properties": {
+        "control": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable control identifier from the source framework (e.g. 'NIS2 Art.21(2)(e)', 'ISO27001 A.8.20', 'CIS-03', 'NIST.PR.DS', 'DORA Art. 9', 'ASVS V9 — Communications')."
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable control title from the source framework."
+        },
+        "category": {
+          "type": "string",
+          "description": "Optional sub-category grouping (e.g. 'APP' for BSI APP.* modules, 'Identify' for NIST CSF function)."
+        },
+        "function": {
+          "type": "string",
+          "description": "NIST-CSF-only: top-level function (Identify / Protect / Detect / Respond / Recover / Govern)."
+        },
+        "implementation_groups": {
+          "type": "array",
+          "description": "CIS-only: implementation groups the control applies to.",
+          "items": { "type": "string", "enum": ["IG1", "IG2", "IG3"] },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "checks": {
+          "type": "array",
+          "description": "List of SaaSFort scanner check names that contribute evidence for this control. Names MUST match the canonical check names used across all framework files (case-sensitive).",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "evidence_types": {
+          "type": "array",
+          "description": "Auditor-facing evidence types that pair with the technical signal (e.g. 'Risk register', 'Penetration test report', 'Cipher allow-list').",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "crosswalkEntry": {
+      "type": "object",
+      "required": ["check", "controls", "framework_count"],
+      "additionalProperties": false,
+      "properties": {
+        "check": { "type": "string", "minLength": 1 },
+        "controls": {
+          "type": "object",
+          "description": "Per-framework array of control IDs that reference this check.",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1
+          }
+        },
+        "framework_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Count of distinct frameworks that map this check."
+        }
+      }
+    }
+  }
+}

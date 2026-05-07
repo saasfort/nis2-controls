@@ -6,6 +6,38 @@ project follows semantic versioning.
 
 ## [Unreleased]
 
+## [0.7.0] — 2026-05-02
+
+### Added
+- `schema/nis2-control-library-v1.json` — JSON Schema (Draft 2020-12) that
+  every framework mapping file under `data/` validates against. Locks down the
+  contract: required top-level fields ($schema/title/license/repository),
+  per-control shape (`control` ID + `checks` array + optional title / category /
+  function / implementation_groups / evidence_types), and the dual shape via
+  `oneOf` (primary framework files require `controls + source`; the derived
+  crosswalk file requires `checks + frameworks`).
+- `scripts/validate-schema.py` — CI-ready validator. Run via
+  `python3 scripts/validate-schema.py` from the repo root. Returns non-zero
+  on any validation failure. Pinned to Draft 2020-12 to match the schema's
+  `$schema` declaration. Requires `pip install jsonschema`.
+- All 8 existing data files (7 frameworks + crosswalk) re-validated against
+  the new schema — 8/8 PASS.
+
+### Why this matters
+Before this release, the `"$schema"` URL embedded in every data file was a
+placeholder pointing at saasfort.com (which served nothing). Contributors had
+no way to validate their own framework PRs locally. The CI lint workflow could
+only check JSON parse + YAML parity. With v0.7.0, contributors can:
+1. Run the validator before submitting a PR.
+2. Get IDE autocomplete + inline hints for the file shape (any IDE that
+   reads the `$schema` reference).
+3. CI can now reject malformed PRs at the schema layer, not just at the
+   YAML/JSON parse layer.
+
+### Repository
+- 7 framework files + 1 crosswalk + HANDBOOK + 3 example languages +
+  schema + validator + issue/PR templates + lint workflow. Total: 19.
+
 ## [0.6.0] — 2026-05-02
 
 ### Added

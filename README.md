@@ -49,6 +49,10 @@ data/
   owasp-asvs-v4-mapping.json          # OWASP ASVS v4.0.3 (technical-depth complement)
   owasp-asvs-v4-mapping.yaml
   check-crosswalk.json                # per-check inverted index across all 7 frameworks
+schema/
+  nis2-control-library-v1.json        # JSON Schema (Draft 2020-12) — every data/*.json validates against this
+scripts/
+  validate-schema.py                  # CI-ready validator; runs `python3 scripts/validate-schema.py`
   check-crosswalk.yaml
 examples/
   python/lookup.py                    # zero-dependency CLI lookup (Python 3.10+)
