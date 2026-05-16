@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://welcome-archon.github.io/nis2-controls/schema/nis2-control-library-v1.json",
+  "$id": "https://saasfort.github.io/nis2-controls/schema/nis2-control-library-v1.json",
   "title": "NIS2 Control Library — Framework Mapping File",
   "description": "Schema for every framework-mapping JSON file under data/ (nis2-controls.json, iso27001-mapping.json, bsi-it-grundschutz-mapping.json, cis-v8-mapping.json, nist-csf-v2-mapping.json, dora-mapping.json, owasp-asvs-v4-mapping.json) AND for the derived crosswalk file (check-crosswalk.json — see oneOf below). Every PR that adds a new framework MUST validate against this schema (CI lint workflow enforces it).",
   "type": "object",
@@ -11,7 +11,7 @@
       "type": "string",
       "description": "Reference to this schema. New files SHOULD use the canonical published URL; legacy files reference the old saasfort.com placeholder.",
       "examples": [
-        "https://welcome-archon.github.io/nis2-controls/schema/nis2-control-library-v1.json",
+        "https://saasfort.github.io/nis2-controls/schema/nis2-control-library-v1.json",
         "https://saasfort.com/schemas/nis2-control-library-v1.json"
       ]
     },
@@ -45,7 +45,7 @@
     "repository": {
       "type": "string",
       "format": "uri",
-      "description": "URL of the canonical repo. Currently github.com/welcome-archon/nis2-controls."
+      "description": "URL of the canonical repo. Currently github.com/saasfort/nis2-controls."
     },
     "controls": {
       "type": "array",

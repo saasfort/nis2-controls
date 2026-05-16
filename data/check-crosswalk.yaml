@@ -4,7 +4,7 @@ description: 'Inverted index: per check, lists every control across NIS2 Art.21,
   it. Use this for one-lookup multi-framework labelling of scan findings.'
 generated_at: '2026-05-07T01:33:20Z'
 license: MIT
-repository: https://github.com/welcome-archon/nis2-controls
+repository: https://github.com/saasfort/nis2-controls
 stats:
   total_unique_checks: 103
   covered_in_all_7_frameworks: 54

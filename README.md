@@ -112,7 +112,7 @@ Use this library to **label** findings from your own scanner. If you want a turn
 ### JavaScript / TypeScript
 
 ```bash
-curl -sL https://raw.githubusercontent.com/welcome-archon/nis2-controls/main/data/nis2-controls.json -o nis2-controls.json
+curl -sL https://raw.githubusercontent.com/saasfort/nis2-controls/main/data/nis2-controls.json -o nis2-controls.json
 ```
 
 ```js
@@ -129,7 +129,7 @@ console.log(article.title);   // "Network & information system security..."
 ```python
 import json, urllib.request
 data = json.load(urllib.request.urlopen(
-    "https://raw.githubusercontent.com/welcome-archon/nis2-controls/main/data/nis2-controls.json"))
+    "https://raw.githubusercontent.com/saasfort/nis2-controls/main/data/nis2-controls.json"))
 
 for ctrl in data["controls"]:
     print(f"{ctrl['control']} — {ctrl['title']}")
@@ -140,11 +140,11 @@ for ctrl in data["controls"]:
 ### Go
 
 ```bash
-go install github.com/welcome-archon/nis2-controls/cmd/...@latest
+go install github.com/saasfort/nis2-controls/cmd/...@latest
 ```
 
 ```go
-import "github.com/welcome-archon/nis2-controls"
+import "github.com/saasfort/nis2-controls"
 mapping := nis2controls.LoadNIS2()
 ```
 
@@ -156,7 +156,7 @@ title: SaaSFort NIS2 Article 21 Control Library
 source: NIS2 Directive (EU) 2022/2555 Article 21
 generated_at: 2026-04-28T00:00:00Z
 license: MIT
-repository: https://github.com/welcome-archon/nis2-controls
+repository: https://github.com/saasfort/nis2-controls
 controls:
   - control: "NIS2 Art.21(2)(e)"
     title: "Network & information system security..."

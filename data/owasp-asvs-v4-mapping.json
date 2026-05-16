@@ -4,7 +4,7 @@
   "source": "OWASP Application Security Verification Standard v4.0.3 (Oct 2021) — externally-observable Level 1 + Level 2 requirements only",
   "generated_at": "2026-05-02T00:00:00Z",
   "license": "MIT",
-  "repository": "https://github.com/welcome-archon/nis2-controls",
+  "repository": "https://github.com/saasfort/nis2-controls",
   "scope_note": "ASVS v4.0.3 has 14 chapters and 286 requirements across Levels 1/2/3. Most requirements need authenticated access, code review, or threat modelling — only a minority can be verified externally without credentials. This file maps 9 chapters whose requirements have at least one externally-observable signal: V2 Authentication, V3 Session Management, V4 Access Control, V8 Data Protection, V9 Communications, V10 Malicious Code, V12 Files & Resources, V13 API & Web Services, V14 Configuration. Internal-only chapters (V1 Architecture, V5 Validation/Encoding/Sanitization, V6 Stored Cryptography, V7 Error Handling and Logging, V11 Business Logic) are intentionally absent — they require source-code review or runtime instrumentation. ASVS is published by OWASP under CC-BY-SA 4.0; this mapping is independent commentary and does not modify the standard text.",
   "controls": [
     {

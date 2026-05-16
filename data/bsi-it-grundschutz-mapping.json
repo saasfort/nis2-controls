@@ -4,7 +4,7 @@
   "source": "BSI IT-Grundschutz Kompendium (Edition 2023) — module requirements (Anforderungen) for externally observable controls",
   "generated_at": "2026-05-02T00:00:00Z",
   "license": "MIT",
-  "repository": "https://github.com/welcome-archon/nis2-controls",
+  "repository": "https://github.com/saasfort/nis2-controls",
   "scope_note": "BSI IT-Grundschutz covers organisational, physical and procedural controls that no external scanner can verify. This file maps only the modules whose requirements (R1/R2) are partially or fully externally observable. Use the HANDBOOK.md for the full module-by-module narrative.",
   "controls": [
     {

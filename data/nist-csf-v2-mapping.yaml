@@ -3,7 +3,7 @@ title: SaaSFort NIST Cybersecurity Framework v2.0 Mapping
 source: NIST Cybersecurity Framework v2.0 (released February 2024) — externally-observable subcategories only
 generated_at: '2026-05-02T00:00:00Z'
 license: MIT
-repository: https://github.com/welcome-archon/nis2-controls
+repository: https://github.com/saasfort/nis2-controls
 scope_note: 'NIST CSF v2 organises 106 subcategories into 6 functions: GV (Govern), ID (Identify), PR (Protect), DE (Detect), RS (Respond), RC (Recover). This file maps only the subcategories with at least
   one externally-observable signal. Pure governance (GV.*), risk-management policy (ID.RA), supply-chain (GV.SC) and recovery (RC.*) subcategories are intentionally absent — no external scanner can verify
   them. The mapping uses the official v2.0 Core, NOT the deprecated v1.1 Categories.'

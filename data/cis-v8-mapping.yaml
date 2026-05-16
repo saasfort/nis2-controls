@@ -3,7 +3,7 @@ title: SaaSFort CIS Controls v8 Mapping
 source: Center for Internet Security Critical Security Controls v8.1 — externally-observable safeguards only
 generated_at: '2026-05-02T00:00:00Z'
 license: MIT
-repository: https://github.com/welcome-archon/nis2-controls
+repository: https://github.com/saasfort/nis2-controls
 scope_note: CIS Controls v8 contains 18 top-level controls and 153 safeguards. This file maps only the controls whose safeguards have an externally-observable component. Internal controls (e.g. CIS-08 Audit
   Log Management, CIS-10 Malware Defenses, CIS-11 Data Recovery) are intentionally omitted because no external scanner can verify them.
 controls:

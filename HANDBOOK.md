@@ -265,5 +265,5 @@ Authoritative reference: CIS Critical Security Controls v8.1 ([cisecurity.org/co
 
 This handbook tracks the SaaSFort scan engine. As we add new checks (and there are 100+ today), this file is regenerated automatically and PRs are welcome to enrich the handbook prose.
 
-Source repository: https://github.com/welcome-archon/nis2-controls
+Source repository: https://github.com/saasfort/nis2-controls
 Maintained by: [SaaSFort](https://saasfort.com)

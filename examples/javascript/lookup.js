@@ -17,7 +17,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const REMOTE_BASE = "https://raw.githubusercontent.com/welcome-archon/nis2-controls/main";
+const REMOTE_BASE = "https://raw.githubusercontent.com/saasfort/nis2-controls/main";
 const DATA_PATH = path.resolve(__dirname, "..", "..", "data");
 
 async function loadJson(name, remote) {

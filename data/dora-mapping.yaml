@@ -3,7 +3,7 @@ title: SaaSFort DORA (Digital Operational Resilience Act) Mapping
 source: Regulation (EU) 2022/2554 (DORA) — externally-observable ICT-risk-management requirements only
 generated_at: '2026-05-02T00:00:00Z'
 license: MIT
-repository: https://github.com/welcome-archon/nis2-controls
+repository: https://github.com/saasfort/nis2-controls
 scope_note: 'DORA covers 5 pillars: ICT risk management (Art. 5-15), incident reporting (Art. 17-23), digital operational resilience testing (Art. 24-27), third-party risk (Art. 28-44), and information
   sharing (Art. 45). The bulk of DORA is process and contractual — much of it cannot be verified externally. This file maps only the articles whose technical requirements have an externally-observable signal:
   Art. 7 (ICT systems/protocols/tools), Art. 8 (asset identification), Art. 9 (protection/prevention/encryption), Art. 10 (detection), Art. 28 (third-party JS supply chain). Articles 5-6 (governance), 11-16

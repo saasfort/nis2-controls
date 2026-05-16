@@ -25,7 +25,7 @@ import (
 	"strings"
 )
 
-const remoteBase = "https://raw.githubusercontent.com/welcome-archon/nis2-controls/main"
+const remoteBase = "https://raw.githubusercontent.com/saasfort/nis2-controls/main"
 
 type crosswalkEntry struct {
 	Check          string              `json:"check"`

@@ -18,7 +18,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-REMOTE_BASE = "https://raw.githubusercontent.com/welcome-archon/nis2-controls/main"
+REMOTE_BASE = "https://raw.githubusercontent.com/saasfort/nis2-controls/main"
 DATA_PATH = Path(__file__).resolve().parents[2] / "data"
 
 
